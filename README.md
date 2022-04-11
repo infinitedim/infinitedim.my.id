@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# Movue
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+<br>
+    <a href="https://img.shields.io/github/package-json/v/infinitedim/infinitedim.my.id"><img src="https://img.shields.io/github/package-json/v/infinitedim/infinitedim.my.id" alt="Version"></a>
+    <a href="https://github.com/infinitedim/infinitedim.my.id/issues"><img src="https://img.shields.io/github/issues/infinitedim/movue" alt="GitHub issues"></a>
+    <a href="https://github.com/infinitedim/infinitedim.my.id/pulls"><img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/infinitedim/infinitedim.my.id"></a>
+    <a href="https://github.com/infinitedim/12-TKJ_1/blob/main/LICENSE"><img src="https://img.shields.io/github/license/infinitedim/infinitedim.my.id" alt="License"></a>
+</p>
+<p align="center">
+<a href="https://infinitedim.my.id">infinitedim.my.id </a> is a movie cast database using vue.
+</p>
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+1. Clone project repositories
+2. Install dependencies
 
-### `npm start`
+- Install using yarn
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+    yarn && yarn upgrade
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Or using npm
 
-### `npm test`
+```bash
+    npm install
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Run development server or build production
 
-### `npm run build`
+- Run using yarn
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+    // development server
+    yarn start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    // production build
+    yarn build
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Or run using npm
 
-### `npm run eject`
+```bash
+    //development server
+    npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    //production build
+    npm run build
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Tech Stack
 
-## Learn More
+- <p>React JS</p> <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" width="40px">
+- <p>Bootstrap <img src="https://cdn.worldvectorlogo.com/logos/bootstrap.svg" width="40px"></p>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Another Package
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- <p>iTyped.js <img src="https://cdn.rawgit.com/luisvinicius167/ityped/master/img/itypedjs.gif" ></p>
+- <p>React Slick</p>
+- <p> Remixicon </p>
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contributing
 
-### Analyzing the Bundle Size
+Contributing Guidelines
+Read through our <a href="https://github.com/infinitedim/infinitedim.my.id/blob/main/CONTRIBUTING.md">Contributing Guidelines</a> to learn about how contribute to this project.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## All Contributors
 
-### Making a Progressive Web App
+Thank you for contributing to this project, here are some amazing contributors!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<a href="https://github.com/infinitedim/movue/graphs/contributors"><img src="https://contrib.rocks/image?repo=infinitedim/infinitedim.my.id" alt="All of amazing contributors"></a>
 
-### Advanced Configuration
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Happy Coding.
