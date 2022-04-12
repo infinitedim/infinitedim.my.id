@@ -1,0 +1,31 @@
+.hire__btn {
+  background: color('white');
+  color: color('backgrond');
+  
+  &:hover {
+    color: color('background');
+  }
+  
+  a {
+    text-decoration: none;
+  }
+}
+
+.hero {
+  padding-top: 150px;
+  &__title {
+    font-weight: 600;
+    
+    span {
+      color: color('primary');
+    }
+  }
+  
+  &__img {
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    background: color('primary');
+    margin-left: auto;
+  }
+}
