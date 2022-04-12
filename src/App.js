@@ -1,9 +1,7 @@
-import "./styles/styles.css";
-// import Layout from "./components/Layout/Layout";
-import Header from "./components/header/Header";
+import Layout from "./components/Layout/Layout";
 
 function App() {
-  return <Header />;
+  return <Layout />;
 }
 
 export default App;
