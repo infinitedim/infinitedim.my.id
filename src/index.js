@@ -8,7 +8,13 @@ import "remixicon/fonts/remixicon.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import "./styles/index.css";
+import "./styles/index.scss";
+/**
+ * nanti sewaktu deploy ke production error, jalanin 'yarn build:scss'
+ * terus comment line 11 dan un-comment line 17
+ * baru deploy ulang
+ */
+// import './styles/index.css';
 
 ReactDOM.render(
   <React.StrictMode>

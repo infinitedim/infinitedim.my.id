@@ -14,6 +14,7 @@
     "react-slick": "^0.28.1",
     "reactstrap": "^9.0.1",
     "remixicon": "^2.5.0",
+    "sass": "^1.50.0",
     "scss": "^0.2.4",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
