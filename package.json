@@ -14,6 +14,7 @@
     "react-slick": "^0.28.1",
     "reactstrap": "^9.0.1",
     "remixicon": "^2.5.0",
+    "sass": "^1.50.0",
     "scss": "^0.2.4",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
@@ -22,7 +23,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build:scss": "sass src/styles/index.scss:src/styles/index.css --style compressed"
   },
   "eslintConfig": {
     "extends": [

@@ -1,0 +1,19 @@
+// Font Family
+$font-family-lato: 'Lato', sans-serif;
+$font-family-rubik: 'Rubik', sans-serif;
+
+$font-family: (
+  'lato': $font-family-lato,
+  'rubik': $font-family-rubik,
+);
+
+// Colors
+$colors: (
+  'background': #03b131,
+  'primary': #7865ff,
+  'card': #132347,
+  'modal': #102048,
+  'scrollbar': #c1ceff,
+  'scrollbar-thumb': #282f4e,
+  'white': #fff,
+);
