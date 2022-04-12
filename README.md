@@ -1,4 +1,4 @@
-# Movue
+# Portfolio
 
 <p align="center">
 <br>
@@ -8,7 +8,7 @@
     <a href="https://github.com/infinitedim/12-TKJ_1/blob/main/LICENSE"><img src="https://img.shields.io/github/license/infinitedim/infinitedim.my.id" alt="License"></a>
 </p>
 <p align="center">
-<a href="https://infinitedim.my.id">infinitedim.my.id </a> is a movie cast database using vue.
+<a href="https://infinitedim.my.id">infinitedim.my.id </a> is my personal portfolio website.
 </p>
 
 ## Installation
