@@ -30,8 +30,11 @@ const Header = () => {
         <div className="nav__menu">
           <ul className="nav__list">
             {
-                navLinks.map((item, index) => <li key={index} className="nav__item">
-                  <a href={item.url} className="nav__link">{item.display}</a></li>
+              navLinks.map((item, index) => {
+                return <li key={index} className="nav__item">
+                <a href={item.url} className="nav__link">{item.display}</a>
+                </li> 
+              }
             )}
             </ul>
           </div>

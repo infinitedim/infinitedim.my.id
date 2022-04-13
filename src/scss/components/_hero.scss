@@ -1,15 +1,5 @@
-.hire__btn {
-  background: color('white');
-  color: color('backgrond');
 
-  &:hover {
-    color: color('background');
-  }
 
-  a {
-    text-decoration: none;
-  }
-}
 
 .hero {
   padding-top: 150px;
@@ -24,11 +14,7 @@
 
   &__img {
     img {
-      width: 400px;
-      height: 400px;
       border-radius: 10px;
-      background: color('primary');
-      margin-left: auto;
     }
   }
 
@@ -36,6 +22,21 @@
     p {
       font-weight: 300;
       line-height: 30px;
+    }
+  }
+
+  &__btns {
+    .btn {
+      background: color('primary');
+      color: color('backgrond');
+  
+      &:hover {
+        color: color('background');
+      }
+  
+      a {
+        text-decoration: none;
+      }
     }
   }
 }
