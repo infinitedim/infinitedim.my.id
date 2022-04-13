@@ -1,6 +1,6 @@
 .about {
   &__btns {
-    background: color('background');
+    background: color('card');
     border-radius: 10px;
   }
 
@@ -25,24 +25,26 @@
   }
 
   &__content {
-    &__wrapper {
-      background-color: color('card');
-    }
-
+    
     h2 {
       margin-bottom: 15px;
     }
-
+    
     p {
       line-height: 30px;
       font-weight: 300;
     }
+
+    &__wrapper {
+      background-color: color('card');
+    }
   }
 
   &__img {
-    background: color('primary');
-    height: 192px;
     border-radius: 10px;
+    img {
+      height: 192px;
+    }
   }
 }
 
