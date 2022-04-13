@@ -8,8 +8,8 @@ const About = () => {
         <Row>
           <Col lg='12'><h2>About Me</h2></Col>
           <Col lg='4' md='3'>
-            <div className="about__btns">
-              <button className="about__btn">About Me</button>
+            <div className="about__btns d-flex align-items-center flex-column">
+              <button className="about__btn about__btn-active">About Me</button>
               <button className="about__btn">Education</button>
               <button className="about__btn">Skills</button>
               <button className="about__btn">Certificate</button>
@@ -21,10 +21,16 @@ const About = () => {
                 <img src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="" />
               </div>
               <div className="about__content">
-
+                <h2>I'm Dimas Saputra</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum adipisci commodi dolore tenetur ad. Adipisci vero cupiditate quia, optio incidunt est. Quas eveniet distinctio explicabo molestias nesciunt, dolore labore maxime!</p>
               </div>
               <div className="social__links">
-
+                <h6 className="mb-4">Connect With Me</h6>
+                <span><a href="#"><i class="ri-instagram-line"></i></a></span>
+                <span><a href="#"><i class="ri-facebook-line"></i></a></span>
+                <span><a href="#"><i class="ri-youtube-line"></i></a></span>
+                <span><a href="#"><i class="ri-github-line"></i></a></span>
+                <span><a href="#"><i class="ri-linkedin-line"></i></a></span>
               </div>
             </div>
           </Col>

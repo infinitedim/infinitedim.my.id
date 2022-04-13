@@ -12,12 +12,12 @@ const Hero = () => {
       typeSpeed: 50,
       strings: [
         'Dimas Saputra',
-        'Student',
-        'a Network Engineer',
+        'a Freelancer',
         'a Frontend Web Developer',
-        'Freelancer',
-        
+        'a Network Engineer',
+        'a Student',
       ],
+      placeholder: false,
     })
   }, [])
   return (

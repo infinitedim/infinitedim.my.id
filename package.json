@@ -10,12 +10,11 @@
     "ityped": "^1.0.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-scripts": "5.0.0",
+    "react-scripts": "^5.0.1",
     "react-slick": "^0.28.1",
     "reactstrap": "^9.0.1",
     "remixicon": "^2.5.0",
     "sass": "^1.50.0",
-    "scss": "^0.2.4",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
   },

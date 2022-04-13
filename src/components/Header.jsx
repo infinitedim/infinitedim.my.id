@@ -15,6 +15,10 @@ const navLinks = [
     url: '#portfolio'
   },
   {
+    display: 'Services',
+    url: '#services'
+  },
+  {
     display: 'Contact',
     url: '#contact'
   },
