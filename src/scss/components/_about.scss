@@ -37,13 +37,16 @@
 
     &__wrapper {
       background-color: color('card');
+      padding: 30px;
+      border-radius: ;
     }
   }
 
   &__img {
+    height: 187px;
     border-radius: 10px;
     img {
-      height: 192px;
+      height: 100%;
     }
   }
 }
@@ -51,6 +54,7 @@
 .social {
   &__links {
     span {
+      margin-top: 10px;
       margin-right: 15px;
       a {
         i {
