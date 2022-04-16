@@ -1,0 +1,27 @@
+.table {
+  border: none;
+  border-collapse: collapse;
+  border: 1px solid color('card');
+  
+  thead {
+    background: color('primary');
+    color: color('white');
+  }
+  
+  th, td {
+    padding: .9rem 1rem;
+    font-size: 1rem;
+  }
+
+  td {
+    font-size: .8rem;
+    color: color('white');
+    font-weight: 500;
+  }
+  
+  tr {
+    &:nth-child(even) {
+      background: color('card');
+    }
+  }
+}
