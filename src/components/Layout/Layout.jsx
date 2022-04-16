@@ -10,7 +10,6 @@ const Layout = () => {
     <Hero />
     <About />
   </React.Fragment>
-
 }
 
 export default Layout
