@@ -34,8 +34,8 @@ const Hero = () => {
             </div>
 
             <div className="mt-4 hero__btns d-flex align-items-center gap-4">
-              <button className="btn"><a href="#">Hire Me</a></button>
-              <button className="btn"><a href="#">Contact</a></button>
+              <button className="btn"><a href="/#">Hire Me</a></button>
+              <button className="btn"><a href="/#">Contact</a></button>
             </div>
           </Col>
           <Col lg='6' md='6'>

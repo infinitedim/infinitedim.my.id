@@ -33,11 +33,11 @@ const About = () => {
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum adipisci commodi dolore tenetur ad. Adipisci vero cupiditate quia, optio incidunt est. Quas eveniet distinctio explicabo molestias nesciunt, dolore labore maxime!</p>
               <div className="social__links">
                 <h6 className="mb-3">Connect With Me</h6>
-                <span><a href="#"><i class="ri-instagram-line"></i></a></span>
-                <span><a href="#"><i class="ri-facebook-line"></i></a></span>
-                <span><a href="#"><i class="ri-youtube-line"></i></a></span>
-                <span><a href="#"><i class="ri-github-line"></i></a></span>
-                <span><a href="#"><i class="ri-linkedin-line"></i></a></span>
+                <span><a href="/#"><i className="ri-instagram-line"></i></a></span>
+                <span><a href="/#"><i className="ri-facebook-line"></i></a></span>
+                <span><a href="/#"><i className="ri-youtube-line"></i></a></span>
+                <span><a href="/#"><i className="ri-github-line"></i></a></span>
+                <span><a href="/#"><i className="ri-linkedin-line"></i></a></span>
               </div>
               </div>
             </div>

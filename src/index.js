@@ -17,7 +17,7 @@ import './scss/index.scss';
 
 // import './scss/index.css';
 
-ReactDOM.hydrate(
+ReactDOM.render(
   <App />, document.getElementById('root')
 );
 
