@@ -13,22 +13,22 @@ const Education = () => {
       </thead>
       <tbody>
         <tr>
-          <th>Degree</th>
-          <th>Departement</th>
-          <th>Institute</th>
-          <th>Year</th>
+          <td>Degree</td>
+          <td>Departement</td>
+          <td>Institute</td>
+          <td>Year</td>
         </tr>
         <tr>
-          <th>Degree</th>
-          <th>Departement</th>
-          <th>Institute</th>
-          <th>Year</th>
+          <td>Degree</td>
+          <td>Departement</td>
+          <td>Institute</td>
+          <td>Year</td>
         </tr>
         <tr>
-          <th>Degree</th>
-          <th>Departement</th>
-          <th>Institute</th>
-          <th>Year</th>
+          <td>Degree</td>
+          <td>Departement</td>
+          <td>Institute</td>
+          <td>Year</td>
         </tr>
       </tbody>
     </table>
