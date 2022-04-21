@@ -2,26 +2,43 @@
   border: none;
   border-collapse: collapse;
   border: 1px solid color('card');
-  
+
   thead {
     background: color('primary');
     color: color('white');
-  }
-  
-  th, td {
-    padding: .9rem 1rem;
-    font-size: 1rem;
-  }
 
-  td {
-    font-size: .8rem;
-    color: color('white');
-    font-weight: 500;
-  }
-  
-  tr {
-    &:nth-child(even) {
-      background: color('card');
+    th {
+      padding: 0.9rem 1rem;
+      font-size: 1rem;
+      color: color('white');
+      font-weight: 500;
     }
   }
+
+  tbody {
+    tr {
+      &:nth-child(even) {
+        background: color('card');
+      }
+
+      td {
+        padding: 0.9rem 1rem;
+        font-size: 1rem;
+        color: color('white');
+        font-weight: 500;
+      }
+    }
+  }
+
+  // td {
+  //   font-size: .8rem;
+  //   color: color('white');
+  //   font-weight: 500;
+  // }
+
+  // tr {
+  //   &:nth-child(even) {
+  //     background: color('card');
+  //   }
+  // }
 }
