@@ -1,0 +1,34 @@
+.skill {
+  &s__wrapper {
+    background: color('card');
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  &__title {
+    margin-bottom: 10px;
+    span {
+      color: color('white');
+    }
+  }
+  
+  &__bar {
+    background: color('scrollbar');
+    border-radius: 50px;
+    height: 5px;
+    position: relative;
+    width: 100%;
+    z-index: 99;
+  }
+    
+  &__bar__percentage {
+    background: color('primary');
+    border-radius: 50px;
+    height: 5px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+  }
+  
+}

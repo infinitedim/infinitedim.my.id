@@ -24,7 +24,7 @@ const About = () => {
           </Col>
           <Col lg='8' md='9'>
             {
-              aboutFilter === 'ABOUT' &&             <div className="about__content__wrapper d-flex gap-5 align-items-center">
+              aboutFilter === 'ABOUT' && <div className="about__content__wrapper d-flex gap-5 align-items-center">
               <div className="about__img w-25">
                 <img src="https://images.unsplash.com/photo-1649773965074-26c817bc7636?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzNnx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="" className="w-100" />
               </div>
