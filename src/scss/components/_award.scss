@@ -1,0 +1,26 @@
+.award {
+  &__card {
+    background: color('card');
+    padding: 20px;
+    border-radius: 5px;
+    border-bottom: 1px solir color('primary');
+  }
+  
+  &__item {
+    width: 47%;
+    margin-bottom: 20px;
+  }
+  
+  &__year {
+    color: color('white');
+    margin-bottom: 15px;
+  }
+  &__title {
+    span {
+      font-weight: 300 !important;
+      color: color('white');
+      opacity: 70% !important;
+      font-size: 0.8rem;
+    }
+  }
+}

@@ -2,13 +2,13 @@
 
 <p align="center">
 <br>
-    <a href="https://img.shields.io/github/package-json/v/infinitedim/infinitedim.my.id"><img src="https://img.shields.io/github/package-json/v/infinitedim/infinitedim.my.id" alt="Version"></a>
-    <a href="https://github.com/infinitedim/infinitedim.my.id/issues"><img src="https://img.shields.io/github/issues/infinitedim/movue" alt="GitHub issues"></a>
-    <a href="https://github.com/infinitedim/infinitedim.my.id/pulls"><img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/infinitedim/infinitedim.my.id"></a>
-    <a href="https://github.com/infinitedim/12-TKJ_1/blob/main/LICENSE"><img src="https://img.shields.io/github/license/infinitedim/infinitedim.my.id" alt="License"></a>
+    <a href="https://img.shields.io/github/package-json/v/infinitedim/portfolio"><img src="https://img.shields.io/github/package-json/v/infinitedim/portfolio" alt="Version"></a>
+    <a href="https://github.com/infinitedim/infinitedim.my.id/issues"><img src="https://img.shields.io/github/issues/infinitedim/portfolio" alt="GitHub issues"></a>
+    <a href="https://github.com/infinitedim/portfolio/pulls"><img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/infinitedim/portfolio"></a>
+    <a href="https://github.com/infinitedim/portfolio/blob/main/LICENSE"><img src="https://img.shields.io/github/license/infinitedim/portfolio" alt="License"></a>
 </p>
 <p align="center">
-<a href="https://infinitedim.my.id">infinitedim.my.id </a> is my personal portfolio website.
+<a href="https://infinitedim.vercel.app">infinitedim.vercel.app</a> is my personal portfolio website.
 </p>
 
 ## Installation
@@ -68,13 +68,13 @@
 ## Contributing
 
 Contributing Guidelines
-Read through our <a href="https://github.com/infinitedim/infinitedim.my.id/blob/main/CONTRIBUTING.md">Contributing Guidelines</a> to learn about how contribute to this project.
+Read through our <a href="https://github.com/infinitedim/portfolio/blob/main/CONTRIBUTING.md">Contributing Guidelines</a> to learn about how contribute to this project.
 
 ## All Contributors
 
 Thank you for contributing to this project, here are some amazing contributors!
 
-<a href="https://github.com/infinitedim/movue/graphs/contributors"><img src="https://contrib.rocks/image?repo=infinitedim/infinitedim.my.id" alt="All of amazing contributors"></a>
+<a href="https://github.com/infinitedim/portfolio/graphs/contributors"><img src="https://contrib.rocks/image?repo=infinitedim/portfolio" alt="All of amazing contributors"></a>
 
 ## License
 
