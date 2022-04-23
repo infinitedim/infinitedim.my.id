@@ -1,4 +1,4 @@
-import React, {useRef, useEffect} from 'react';
+import React, { useRef, useEffect } from 'react';
 import { Container } from 'reactstrap';
 
 const navLinks = [
@@ -25,23 +25,28 @@ const navLinks = [
 ];
 
 const Header = () => {
-  
-  const headerRef = useRef(null)
-  
-  const bodyScrollTop = document.bodyScrollTop || document.documentElement.scrollTop
+  const headerRef = useRef<HTMLElement>(null);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const bodyScrollTop = () => {
+    if (document) {
+      return document.body.scrollTop || document.documentElement.scrollTop;
+    } else {
+      return 0;
+    }
+  }
   
   useEffect(() => {
     window?.addEventListener('scroll', () => {
-      if(bodyScrollTop > 80) {
-        headerRef?.current?.add("header__shrink")
+      if (bodyScrollTop() > 80) {
+        headerRef?.current?.classList.add('header__shrink');
       } else {
-        headerRef?.current?.remove("header__shrink")
+        headerRef?.current?.classList.remove('header__shrink');
       }
-    }
-  }, [bodyScrollTop])
-  
+    });
+  }, [bodyScrollTop]);
+
   return (
-    <header className="header">
+    <header className="header" ref={headerRef}>
       <Container>
         <div className="navigation d-flex align-items-center justify-content-between">
           <div className="logo">
