@@ -8,6 +8,10 @@
   top: 0;
   left: 0;
   z-index: 1;
+  &__shrink {
+    background: color('card');
+    box-shadow: 2px 2px 4px -2px color('primary');
+  }
 }
 
 .logo h5 {
@@ -72,8 +76,3 @@
     cursor: pointer;
   }
 }
-
-/* .header__shrink {
-  background: #132347;
-  box-shadow: 2px 2px 4px -2px #7765ffbd;
-} */

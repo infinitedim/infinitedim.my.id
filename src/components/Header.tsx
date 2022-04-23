@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef, useEffect} from 'react';
 import { Container } from 'reactstrap';
 
 const navLinks = [
@@ -25,6 +25,21 @@ const navLinks = [
 ];
 
 const Header = () => {
+  
+  const headerRef = useRef(null)
+  
+  const bodyScrollTop = document.bodyScrollTop || document.documentElement.scrollTop
+  
+  useEffect(() => {
+    window?.addEventListener('scroll', () => {
+      if(bodyScrollTop > 80) {
+        headerRef?.current?.add("header__shrink")
+      } else {
+        headerRef?.current?.remove("header__shrink")
+      }
+    }
+  }, [bodyScrollTop])
+  
   return (
     <header className="header">
       <Container>
