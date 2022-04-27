@@ -1,26 +1,37 @@
 import React from 'react'
 
-type AwardItemProps = {
-  year: string;
+interface AwardTypes {
+  image: string;
   title: string;
-  text: string;
+  year: string;
+}
+
+const awardData: AwardTypes[] = [
+  {
+    image: '../../assets/dicoding_aws_251.jp',
+    title: 'Belajar Dasar Pemrograman Web',
+    year: '2021',
+  },
+]
+
+type AwardItemProps = {
+  image: string, 
+  title: string,
+  year: string,
 }
 
 const AwardItem = ({
-  year,
+  image,
   title,
-  text,
+  year,
 }: AwardItemProps): React.ReactElement => {
   return (
     <div className="award__card">
-      <div className="award__year">
-        {year}
+      <div className="award__image">
+        <img src={image} />
       </div>
-      <h6 className="award__title">{title} - {""}
-        <span>
-          {text}
-        </span>
-      </h6>
+      <h6 className="award__title">{title}</h6>
+      <div className="award__year"> {year} </div>
     </div>
     )
 }
@@ -28,15 +39,18 @@ const AwardItem = ({
 const Award = () => {
   return (
       <div className="award__container d-flex align-items-center flex-wrap justify-content-between">
-        <div className="award__item">
-          <AwardItem year="2020" title="Lorem ipsum" text="Lorem Ipsum dolor, amet sit consectetur adipicising elit. Prosenteum, molecias"/>
-        </div>
-        <div className="award__item">
-          <AwardItem year="2020" title="Lorem ipsum" text="Lorem Ipsum dolor, amet sit consectetur adipicising elit. Prosenteum, molecias"/>
-        </div>
-        <div className="award__item">
-          <AwardItem year="2020" title="Lorem ipsum" text="Lorem Ipsum dolor, amet sit consectetur adipicising elit. Prosenteum, molecias"/>
-        </div>
+        {
+          awardData.map((item,index) => {
+            return (
+              <AwardItem
+                key={index.toString()}
+                image={item.image}
+                title={item.title}
+                year={item.year}
+              />
+            )
+          })
+        }
       </div>
     )
 }
