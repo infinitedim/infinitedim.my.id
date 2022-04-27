@@ -8,6 +8,7 @@ import 'remixicon/fonts/remixicon.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+
 import './scss/index.scss';
 /**
  * nanti sewaktu deploy ke production error, jalanin 'yarn build:scss'

@@ -1,4 +1,5 @@
 import React from 'react'
+import Aws from '../assets/dicoding_aws_251.jpg'
 
 interface AwardTypes {
   image: string;
@@ -8,7 +9,7 @@ interface AwardTypes {
 
 const awardData: AwardTypes[] = [
   {
-    image: '../../assets/dicoding_aws_251.jp',
+    image: Aws,
     title: 'Belajar Dasar Pemrograman Web',
     year: '2021',
   },
@@ -28,7 +29,7 @@ const AwardItem = ({
   return (
     <div className="award__card">
       <div className="award__image">
-        <img src={image} />
+        <img src={image} alt={title} />
       </div>
       <h6 className="award__title">{title}</h6>
       <div className="award__year"> {year} </div>
