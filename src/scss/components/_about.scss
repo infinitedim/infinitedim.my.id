@@ -69,3 +69,22 @@
     }
   }
 }
+
+@media screen and(max-width: 576px) {
+  .about {
+    &__content {
+      &__wrapper {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    &__img {
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }
+    }
+  }
+}

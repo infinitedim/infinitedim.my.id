@@ -10,22 +10,22 @@ interface ServicesTypes {
 const servicesData: ServicesTypes[] = [
   {
     icon: 'ri-code-line',
-    title: 'Lorem Ipsum',
+    title: 'Web Development',
     desc: 'lorem ipsum dolor sit amet consectetur adipisicing elit. Daleniti dolorem quae voluptatum officia at repudiandae suscipit exercitationem dolor asperiores cum?'
   },
   {
-    icon: 'ri-code-line',
-    title: 'Lorem Ipsum',
+    icon: 'ri-router-line',
+    title: 'Networking',
     desc: 'lorem ipsum dolor sit amet consectetur adipisicing elit. Daleniti dolorem quae voluptatum officia at repudiandae suscipit exercitationem dolor asperiores cum?'
   },
   {
-    icon: 'ri-code-line',
-    title: 'Lorem Ipsum',
+    icon: 'ri-collage-fill',
+    title: 'Web Design',
     desc: 'lorem ipsum dolor sit amet consectetur adipisicing elit. Daleniti dolorem quae voluptatum officia at repudiandae suscipit exercitationem dolor asperiores cum?'
   },
   {
-    icon: 'ri-code-line',
-    title: 'Lorem Ipsum',
+    icon: 'ri-bug-fill',
+    title: 'Pentesting',
     desc: 'lorem ipsum dolor sit amet consectetur adipisicing elit. Daleniti dolorem quae voluptatum officia at repudiandae suscipit exercitationem dolor asperiores cum?'
   }, 
 ]

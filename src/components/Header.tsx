@@ -11,10 +11,6 @@ const navLinks = [
     url: '#about',
   },
   {
-    display: 'Portfolio',
-    url: '#portfolio',
-  },
-  {
     display: 'Services',
     url: '#services',
   },
@@ -56,7 +52,7 @@ const Header = () => {
             <ul className="nav__list">
               {navLinks.map((item, index) => {
                 return (
-                  <li key={index} className="nav__item">
+                  <li key={index.toString()} className="nav__item">
                     <a href={item.url} className="nav__link">
                       {item.display}
                     </a>

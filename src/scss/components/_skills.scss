@@ -32,3 +32,29 @@
   }
   
 }
+
+.frontend__skill {
+  width: 50%;
+}
+
+.backend__skill {
+  width: 50%;
+}
+
+@media screen and(max-width: 576px) {
+  .skill {
+    &s__wrapper {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  
+  .frontend__skill {
+    width: 80%;
+  }
+  
+  .backend__skill {
+    width: 80%;
+  }
+}

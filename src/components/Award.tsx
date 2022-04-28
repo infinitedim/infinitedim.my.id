@@ -13,6 +13,16 @@ const awardData: AwardTypes[] = [
     title: 'Belajar Dasar Pemrograman Web',
     year: '2021',
   },
+    {
+    image: Aws,
+    title: 'Belajar Dasar Pemrograman Web',
+    year: '2021',
+  },
+    {
+    image: Aws,
+    title: 'Belajar Dasar Pemrograman Web',
+    year: '2021',
+  },
 ]
 
 type AwardItemProps = {
@@ -27,12 +37,14 @@ const AwardItem = ({
   year,
 }: AwardItemProps): React.ReactElement => {
   return (
-    <div className="award__card">
-      <div className="award__image">
-        <img src={image} alt={title} />
+    <div className="award__item">
+      <div className="award__card">
+        <div className="award__image">
+          <img src={image} alt={title} />
+        </div>
+        <h6 className="award__title">{title}</h6>
+        <div className="award__year"> {year} </div>
       </div>
-      <h6 className="award__title">{title}</h6>
-      <div className="award__year"> {year} </div>
     </div>
     )
 }

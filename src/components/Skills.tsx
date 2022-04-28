@@ -70,7 +70,7 @@ const SkillItem = ({
 const Skills = () => {
   return (
     <div className="skills__wrapper d-flex gap-5">
-      <div className="frontend__skill w-50">
+      <div className="frontend__skill">
         {frontendSkills.map((item,index) => (
           <SkillItem
             key={index.toString()}
@@ -79,7 +79,7 @@ const Skills = () => {
           />
         ))}
       </div>
-      <div className="backend__skill w-50">
+      <div className="backend__skill">
         {backendSkills.map((item,index) => (
           <SkillItem
             key={index}
