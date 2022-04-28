@@ -22,11 +22,16 @@
 }
 
 .nav {
+  &__menu {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+  }
   &__list {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    width: 40%;
+    justify-content: space-between;
+    width: 60%;
   }
 
   &__item {
@@ -53,7 +58,7 @@
   padding: 7px 25px;
   font-size: 0.9rem;
   cursor: pointer;
-
+  display: none;
   &:hover {
     color: color('white');
   }
@@ -87,5 +92,8 @@
     &__list {
       display: none;
     }
+  }
+  .btn {
+    display: flex;
   }
 }
