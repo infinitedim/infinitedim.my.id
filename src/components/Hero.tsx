@@ -40,10 +40,10 @@ const Hero = () => {
             </div>
 
             <div className="mt-4 hero__btns d-flex align-items-center gap-4">
-              <button className="btn">
+              <button className="hero__btn">
                 <a href="/#">Hire Me</a>
               </button>
-              <button className="btn">
+              <button className="hero__btn">
                 <a href="/#">Contact</a>
               </button>
             </div>

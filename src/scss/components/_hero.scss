@@ -22,18 +22,21 @@
     }
   }
 
-  &__btns {
-    .btn {
-      background: color('primary');
-      color: color('backgrond');
+  &__btn {
+    background: color('primary');
+    color: color('white');
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 7px 25px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    &:hover {
+      color: color('background');
+    }
   
-      &:hover {
-        color: color('background');
-      }
-  
-      a {
-        text-decoration: none;
-      }
+    a {
+      text-decoration: none;
     }
   }
 }
