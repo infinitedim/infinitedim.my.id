@@ -59,8 +59,9 @@
   font-size: 0.9rem;
   cursor: pointer;
   display: none;
+  webkit-line-clamp: 1;
   &:hover {
-    color: color('ba');
+    color: color('background');
   }
 
   &__link {
@@ -95,5 +96,6 @@
   }
   .btn {
     display: flex;
+    width: 100%;
   }
 }
