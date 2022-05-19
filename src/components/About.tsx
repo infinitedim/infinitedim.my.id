@@ -47,7 +47,7 @@ const About = () => {
               <div className="about__content__wrapper d-flex gap-5 align-items-center">
                 <div className="about__img">
                   <img
-                    src="https://images.unsplash.com/photo-1649773965074-26c817bc7636?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzNnx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
+                    src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
                     alt=""
                     className="w-100"
                   />

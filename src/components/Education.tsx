@@ -1,5 +1,58 @@
 import React from 'react';
 
+interface EducationTypes {
+  degree: string;
+  department: string;
+  institute: string;
+  year: string;
+}
+
+const educationData: EducationTypes[] = [
+  {
+    degree: 'Vocational High School',
+    department: 'Bekasi',
+    institute: 'Yapenhas Boedi Luhur',
+    year: '2022'
+  },
+  {
+    degree: 'Vocational High School',
+    department: 'Bekasi',
+    institute: 'Yapenhas Boedi Luhur',
+    year: '2022'
+  },
+  {
+    degree: 'Vocational High School',
+    department: 'Bekasi',
+    institute: 'Yapenhas Boedi Luhur',
+    year: '2022'
+  }
+]
+
+type educationItemProps = {
+  degree: string,
+  department: string,
+  institute: string,
+  year: string,
+}
+
+const EducationItem = ({
+  degree,
+  department,
+  institute,
+  year,
+}: educationItemProps): React.ReactElement => {
+  return (
+    <tbody>
+        <tr>
+          <td>{degree}</td>
+          <td>{department}</td>
+          <td>{institute}</td>
+          <td>{year}</td>
+        </tr>
+      </tbody>
+  )
+}
+
 const Education = () => {
   return (
     <table className="table">
@@ -11,26 +64,17 @@ const Education = () => {
           <th>Year</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>Degree</td>
-          <td>Departement</td>
-          <td>Institute</td>
-          <td>Year</td>
-        </tr>
-        <tr>
-          <td>Degree</td>
-          <td>Departement</td>
-          <td>Institute</td>
-          <td>Year</td>
-        </tr>
-        <tr>
-          <td>Degree</td>
-          <td>Departement</td>
-          <td>Institute</td>
-          <td>Year</td>
-        </tr>
-      </tbody>
+      {
+        educationData.map((item,index) => (
+          <EducationItem 
+            key={index.toString()}
+            degree={item.degree}
+            department={item.department}
+            institute={item.institute}
+            year={item.year}
+          />
+        ))
+      }
     </table>
   );
 };

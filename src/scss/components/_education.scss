@@ -4,6 +4,7 @@
   border: 1px solid color('card');
 
   thead {
+    border-bottom: 2px solid color('white');
     background: color('primary');
     color: color('white');
 
@@ -16,11 +17,14 @@
   }
 
   tbody {
+    &:nth-child(odd) {
+      background: color('primary');
+      border: 1px solid color('card');
+    }
+    &:nth-child(even) {
+      border: 1px solid color('card');
+    }
     tr {
-      &:nth-child(even) {
-        background: color('card');
-      }
-
       td {
         padding: 0.9rem 1rem;
         font-size: 1rem;

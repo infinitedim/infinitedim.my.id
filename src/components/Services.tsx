@@ -60,7 +60,6 @@ const Services = () => {
       <Container>
         <Row>
           <Col lg="12" className="services__top mb-5">
-            <h6>Features</h6>
             <h2>What Service I Provide</h2>
           </Col>
           {
