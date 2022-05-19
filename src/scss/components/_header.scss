@@ -60,7 +60,7 @@
   font-size: 0.9rem;
   cursor: pointer;
   display: none;
-  webkit-line-clamp: 1;
+  line-clamp: 1;
   &:hover {
     color: color('background');
   }
