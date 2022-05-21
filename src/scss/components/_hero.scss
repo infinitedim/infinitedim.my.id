@@ -40,3 +40,13 @@
     }
   }
 }
+
+// Mobile view
+
+@media screen and (max-width: 576px) {
+  .hero {
+    &__img {
+      display: none;
+    }
+  }
+}

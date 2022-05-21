@@ -73,9 +73,11 @@
 @media screen and(max-width: 576px) {
   .about {
     &__content {
+    
       &__wrapper {
         display: flex;
         flex-direction: column;
+        margin-top: 20px;
       }
     }
     &__img {

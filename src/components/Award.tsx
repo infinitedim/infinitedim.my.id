@@ -1,5 +1,8 @@
 import React from 'react'
-import Aws from '../assets/dicoding_aws_251.jpg'
+import sc_251 from '../assets/sc_251.jpg'
+import sc_123 from '../assets/sc_123.jpg'
+import sc_315 from '../assets/sc_315.jpg'
+import sc_163 from '../assets/sc_163.jpg'
 
 interface AwardTypes {
   image: string;
@@ -9,20 +12,25 @@ interface AwardTypes {
 
 const awardData: AwardTypes[] = [
   {
-    image: Aws,
-    title: 'Belajar Dasar Pemrograman Web',
+    image: sc_123,
+    title: 'Web Programming Fundamental',
     year: '2021',
   },
-    {
-    image: Aws,
-    title: 'Belajar Dasar Pemrograman Web',
+  {
+    image: sc_315,
+    title: 'Frontend Web For Beginer',
     year: '2021',
   },
-    {
-    image: Aws,
-    title: 'Belajar Dasar Pemrograman Web',
+  {
+    image: sc_163  ,
+    title: 'Frontend Web Fundamental',
     year: '2021',
   },
+  {
+  image: sc_251,
+  title: 'Cloud Practitioner Essentials',
+  year: '2021',
+},
 ]
 
 type AwardItemProps = {

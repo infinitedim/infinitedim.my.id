@@ -3,6 +3,7 @@
     background: color('card');
     padding: 20px;
     border-radius: 10px;
+    margin-top: 20px;
   }
   
   &__title {
@@ -18,7 +19,7 @@
     height: 5px;
     position: relative;
     width: 100%;
-    z-index: 99;
+    z-index: 2;
   }
     
   &__bar__percentage {
@@ -28,7 +29,7 @@
     left: 0;
     position: absolute;
     top: 0;
-    z-index: 1000;
+    z-index: 2;
   }
   
 }

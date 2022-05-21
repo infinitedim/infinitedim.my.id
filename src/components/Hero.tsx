@@ -7,7 +7,7 @@ const Hero = () => {
 
   useEffect(() => {
     init(textRef?.current as unknown as Element, {
-      backDelay: 2000,
+      backDelay: 1000,
       showCursor: true,
       typeSpeed: 50,
       strings: [
