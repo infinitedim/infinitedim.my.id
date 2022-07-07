@@ -2,7 +2,7 @@
   margin-top: 20px;
   &__card {
     background: color('card');
-    padding: 20px;
+    padding: 10px;
     border-radius: 5px;
     border-bottom: 1px solid color('primary');
   }
@@ -58,7 +58,7 @@
       flex-direction: column;
     }
     &__item {
-      width: 80%;
+      width: 95%;
     }
     &__image {
       width: 100%;

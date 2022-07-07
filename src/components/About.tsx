@@ -63,7 +63,7 @@ const About = () => {
                   <div className="social__links">
                     <h6 className="mb-3">Connect With Me</h6>
                     <span>
-                      <a href="/#">
+                      <a href="https://insagram.com/infinite.dim_">
                         <i className="ri-instagram-line"></i>
                       </a>
                     </span>
@@ -78,12 +78,12 @@ const About = () => {
                       </a>
                     </span>
                     <span>
-                      <a href="/#">
+                      <a href="https://github.com/infinitedim">
                         <i className="ri-github-line"></i>
                       </a>
                     </span>
                     <span>
-                      <a href="/#">
+                      <a href="https://linkedin.com/in/infinitedim">
                         <i className="ri-linkedin-line"></i>
                       </a>
                     </span>

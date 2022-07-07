@@ -96,8 +96,12 @@
       display: none;
     }
   }
+
   .btn {
     display: flex;
     width: 100%;
+    span {
+      font-size: 12px;
+    }
   }
 }

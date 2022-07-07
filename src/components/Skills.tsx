@@ -10,20 +10,20 @@ interface SkillsTypes {
 const frontendSkills: SkillsTypes[] = [
   {
     title: 'JavaScript',
-    width: '85%',
-    percentage: '85%',
+    width: '66%',
+    percentage: '66%',
     level: 'Middle',
   },
   {
     title: 'VueJS',
-    width: '80%',
-    percentage: '80%',
+    width: '33%',
+    percentage: '33%',
     level: 'Beginner',
   },
   {
     title: 'ReactJS',
-    width: '70%',
-    percentage: '70%',
+    width: '33%',
+    percentage: '33%',
     level: 'Beginner',
   },
 ];
@@ -31,20 +31,20 @@ const frontendSkills: SkillsTypes[] = [
 const backendSkills: SkillsTypes[] = [
   {
     title: 'NodeJS',
-    width: '80%',
-    percentage: '80%',
+    width: '33%',
+    percentage: '33%',
     level: 'Beginner',
   },
   {
     title: 'Python',
-    width: '70%',
-    percentage: '70%',
+    width: '66%',
+    percentage: '66%',
     level: 'Middle',
   },
   {
     title: 'Django',
-    width: '75%',
-    percentage: '75%',
+    width: '33%',
+    percentage: '33%',
     level: 'Begginer',
   },
 ];

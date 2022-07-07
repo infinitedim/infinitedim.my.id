@@ -63,7 +63,7 @@ const Header = () => {
           </div>
 
           <div className="nav__right d-flex align-items-center gap-4">
-            <button className="btn">Let's Talk</button>
+            <button className="btn"><span>Let's Talk</span></button>
             <span className="mobile__menu">
               <i className="ri-menu-2-fill"></i>
             </span>
