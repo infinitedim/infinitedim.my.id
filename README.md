@@ -1,4 +1,4 @@
-# Portfolio
+# Oᴉloɟʇɹod
 
 <p align="center">
 <br>
@@ -53,14 +53,14 @@
 
 #
 
-## Tech Stack
+## ʞɔɐʇS ɥɔǝ┴
 
-- <p>React JS</p> <img src="https://cdn.worldvectorlogo.com/logos/react-2.svg" width="40px">
-- <p>Bootstrap <img src="https://cdn.worldvectorlogo.com/logos/bootstrap.svg" width="40px"></p>
+- <p>React JS</p>
+- <p>Bootstrap</p>
 
-## Another Package
+## ǝƃɐʞɔɐԀ ɹǝɥʇou∀
 
-- <p>iTyped.js <img src="https://cdn.rawgit.com/luisvinicius167/ityped/master/img/itypedjs.gif" ></p>
+- <p>iTyped.js</p>
 - <p>React Slick</p>
 - <p> Remixicon </p>
 
@@ -80,4 +80,4 @@ Thank you for contributing to this project, here are some amazing contributors!
 
 This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-Happy Coding.
+ƃuᴉpoƆ ʎddɐH
