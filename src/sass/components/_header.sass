@@ -1,0 +1,85 @@
+/* Header style */
+
+.header
+  display: flex
+  align-items: center
+  width: 100%
+  line-height: 50px
+  padding: 10px
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 10
+  &__shrink
+    background: color('card')
+    backdrop-filter: blur(100px)
+    box-shadow: 2px 2px 4px -2px color('primary')
+    z-index: 10
+
+.logo h5
+  font-size: 1.3rem
+  color: color('primary') // => #7865ff
+
+.nav
+  &__menu
+    display: flex
+    width: 100%
+    justify-content: flex-end
+
+  &__list
+    display: flex
+    align-items: center
+    justify-content: space-between
+    width: 60%
+
+  &__item
+    a
+      text-decoration: none
+      color: color('white')
+      transition: 0.3s
+      font-weight: 400
+      cursor: pointer
+
+      &:hover
+        color: color('primary')
+
+.btn
+  background-color: color('primary') // => #7865ff
+  color: color('white') // => #fff
+  border: none
+  outline: none
+  border-radius: 5px
+  padding: 7px 25px
+  font-size: 0.9rem
+  cursor: pointer
+  display: none
+  line-clamp: 1
+  &:hover
+    color: color('background')
+
+  &__link
+    // => .btn__link
+    text-decoration: none
+
+.mobile__menu
+  display: none
+
+  i
+    // => .mobile__menu i
+    color: color('white') // => #fff
+    font-size: 1.3rem
+    cursor: pointer
+
+// tab screen
+
+// mobile screen 
+@media screen and (max-width: 576px)
+  .nav
+    &__list
+      display: none
+
+  .btn
+    display: flex
+    width: 100%
+    span
+      font-size: 12px

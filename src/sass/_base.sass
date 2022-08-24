@@ -1,0 +1,51 @@
+/* Base Styles */
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  list-style: none
+  text-decoration: none
+  color: color('white')
+  scroll-margin-top: 71px
+
+body
+  background: color('background') // => #0e1b31 (from _funtions.scss);
+
+html
+  scroll-behavior: smooth
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+  color: color('white') // => #fff (from _funtions.scss)
+  font-family: font-family('lato') // => 'Lato', sans-serif (from _variables.scss)
+
+h1,
+h2
+  font-size: 2rem
+  font-weight: 500
+
+p
+  color: color('white') // => #fff (from _funtions.scss)
+  opacity: 75%
+  font-family: font-family('rubik') // => 'Rubik', sans-serif (from _variables.scss)
+  font-size: 1rem
+  font-weight: 400
+
+ul
+  list-style: none
+  margin: 0
+
+a
+  color: unset
+  font-family: font-family('lato') // => 'Lato', sans-serif (from _variables.scss)
+
+  &:hover
+    // => a:hover
+    color: unset
+
+section, footer
+  padding: 60px 0

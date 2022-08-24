@@ -1,0 +1,47 @@
+.skill
+  &s__wrapper
+    background: color('card')
+    padding: 20px
+    border-radius: 10px
+    margin-top: 20px
+
+  &__title
+    margin-bottom: 10px
+    span
+      color: color('white')
+
+  &__bar
+    background: color('scrollbar')
+    border-radius: 50px
+    height: 5px
+    position: relative
+    width: 100%
+    z-index: 2
+
+  &__bar__percentage
+    background: color('primary')
+    border-radius: 50px
+    height: 5px
+    left: 0
+    position: absolute
+    top: 0
+    z-index: 2
+
+.frontend__skill
+  width: 50%
+
+.backend__skill
+  width: 50%
+
+@media screen and (max-width: 576px)
+  .skill
+    &s__wrapper
+      align-items: center
+      display: flex
+      flex-direction: column
+
+  .frontend__skill
+    width: 80%
+
+  .backend__skill
+    width: 80%

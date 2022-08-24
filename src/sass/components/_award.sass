@@ -1,0 +1,55 @@
+.award
+  margin-top: 20px
+  &__card
+    background: color('card')
+    padding: 10px
+    border-radius: 5px
+    border-bottom: 1px solid color('primary')
+
+  &__item
+    width: 47%
+    margin: 10px
+
+  &__year
+    color: color('white')
+    margin-bottom: 15px
+
+  &__title
+    span
+      font-weight: 300 !important
+      color: color('white')
+      opacity: 70% !important
+      font-size: 0.8rem
+
+  &__image
+    align-items: center
+    display: flex
+    justify-content: center
+    width: 100%
+
+    img
+      width: 100%
+
+@media screen and (max-width: 786px)
+  .award
+    &__item
+      width: 100%
+
+    &__image
+      width: 100%
+
+      img
+        width: 100%
+
+@media screen and (max-width: 576px)
+  .award
+    &__container
+      flex-direction: column
+
+    &__item
+      width: 95%
+
+    &__image
+      width: 100%
+      img
+        width: 100%

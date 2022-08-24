@@ -9,7 +9,8 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 
-import './scss/index.scss';
+import "./sass/index.sass";
+
 /**
  * nanti sewaktu deploy ke production error, jalanin 'yarn build:scss'
  * terus comment line 11 dan un-comment line 17
