@@ -1,8 +1,8 @@
-import React, { useRef, useEffect } from 'react';
-import { Container, Row, Col } from 'reactstrap';
-import { init } from 'ityped';
+import React, { useRef, useEffect } from "react";
+import { Container, Row, Col } from "reactstrap";
+import { init } from "ityped";
 
-const Hero = () => {
+export default function Hero() {
   const textRef = useRef(null);
 
   useEffect(() => {
@@ -11,11 +11,11 @@ const Hero = () => {
       showCursor: true,
       typeSpeed: 50,
       strings: [
-        'Dimas Saputra',
-        'a Freelancer',
-        'a Frontend Web Developer',
-        'a Network Engineer',
-        'a Student',
+        "Dimas Saputra",
+        "a Freelancer",
+        "a Frontend Web Developer",
+        "a Network Engineer",
+        "a Student",
       ],
       placeholder: false,
     });
@@ -61,6 +61,4 @@ const Hero = () => {
       </Container>
     </section>
   );
-};
-
-export default Hero;
+}

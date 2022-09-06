@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactElement } from "react";
 
 interface EducationTypes {
   degree: string;
@@ -9,51 +9,51 @@ interface EducationTypes {
 
 const educationData: EducationTypes[] = [
   {
-    degree: 'Vocational High School',
-    department: 'Bekasi',
-    institute: 'Yapenhas Boedi Luhur',
-    year: '2022'
+    degree: "Vocational High School",
+    department: "Bekasi",
+    institute: "Yapenhas Boedi Luhur",
+    year: "2022",
   },
   {
-    degree: 'Vocational High School',
-    department: 'Bekasi',
-    institute: 'Yapenhas Boedi Luhur',
-    year: '2022'
+    degree: "Vocational High School",
+    department: "Bekasi",
+    institute: "Yapenhas Boedi Luhur",
+    year: "2022",
   },
   {
-    degree: 'Vocational High School',
-    department: 'Bekasi',
-    institute: 'Yapenhas Boedi Luhur',
-    year: '2022'
-  }
-]
+    degree: "Vocational High School",
+    department: "Bekasi",
+    institute: "Yapenhas Boedi Luhur",
+    year: "2022",
+  },
+];
 
 type educationItemProps = {
-  degree: string,
-  department: string,
-  institute: string,
-  year: string,
-}
+  degree: string;
+  department: string;
+  institute: string;
+  year: string;
+};
 
 const EducationItem = ({
   degree,
   department,
   institute,
   year,
-}: educationItemProps): React.ReactElement => {
+}: educationItemProps): ReactElement => {
   return (
     <tbody>
-        <tr>
-          <td>{degree}</td>
-          <td>{department}</td>
-          <td>{institute}</td>
-          <td>{year}</td>
-        </tr>
-      </tbody>
-  )
-}
+      <tr>
+        <td>{degree}</td>
+        <td>{department}</td>
+        <td>{institute}</td>
+        <td>{year}</td>
+      </tr>
+    </tbody>
+  );
+};
 
-const Education = () => {
+export default function Education() {
   return (
     <table className="table">
       <thead>
@@ -64,19 +64,15 @@ const Education = () => {
           <th>Year</th>
         </tr>
       </thead>
-      {
-        educationData.map((item,index) => (
-          <EducationItem 
-            key={index.toString()}
-            degree={item.degree}
-            department={item.department}
-            institute={item.institute}
-            year={item.year}
-          />
-        ))
-      }
+      {educationData.map((item, index) => (
+        <EducationItem
+          key={index.toString()}
+          degree={item.degree}
+          department={item.department}
+          institute={item.institute}
+          year={item.year}
+        />
+      ))}
     </table>
   );
-};
-
-export default Education;
+}

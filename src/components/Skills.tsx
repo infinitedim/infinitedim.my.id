@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface SkillsTypes {
   title: string;
@@ -9,43 +9,43 @@ interface SkillsTypes {
 
 const frontendSkills: SkillsTypes[] = [
   {
-    title: 'JavaScript',
-    width: '66%',
-    percentage: '66%',
-    level: 'Middle',
+    title: "JavaScript",
+    width: "66%",
+    percentage: "66%",
+    level: "Middle",
   },
   {
-    title: 'VueJS',
-    width: '33%',
-    percentage: '33%',
-    level: 'Beginner',
+    title: "VueJS",
+    width: "33%",
+    percentage: "33%",
+    level: "Beginner",
   },
   {
-    title: 'ReactJS',
-    width: '33%',
-    percentage: '33%',
-    level: 'Beginner',
+    title: "ReactJS",
+    width: "33%",
+    percentage: "33%",
+    level: "Beginner",
   },
 ];
 
 const backendSkills: SkillsTypes[] = [
   {
-    title: 'NodeJS',
-    width: '33%',
-    percentage: '33%',
-    level: 'Beginner',
+    title: "NodeJS",
+    width: "33%",
+    percentage: "33%",
+    level: "Beginner",
   },
   {
-    title: 'Python',
-    width: '66%',
-    percentage: '66%',
-    level: 'Middle',
+    title: "Python",
+    width: "66%",
+    percentage: "66%",
+    level: "Middle",
   },
   {
-    title: 'Django',
-    width: '33%',
-    percentage: '33%',
-    level: 'Begginer',
+    title: "Django",
+    width: "33%",
+    percentage: "33%",
+    level: "Begginer",
   },
 ];
 
@@ -76,11 +76,11 @@ const SkillItem = ({
   );
 };
 
-const Skills = () => {
+export default function Skills() {
   return (
     <div className="skills__wrapper d-flex gap-5">
       <div className="frontend__skill">
-        {frontendSkills.map((item,index) => (
+        {frontendSkills.map((item, index) => (
           <SkillItem
             key={index.toString()}
             title={item.title}
@@ -90,7 +90,7 @@ const Skills = () => {
         ))}
       </div>
       <div className="backend__skill">
-        {backendSkills.map((item,index) => (
+        {backendSkills.map((item, index) => (
           <SkillItem
             key={index}
             title={item.title}
@@ -101,6 +101,4 @@ const Skills = () => {
       </div>
     </div>
   );
-};
-
-export default Skills;
+}

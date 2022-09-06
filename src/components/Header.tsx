@@ -1,42 +1,41 @@
-import React, { useRef, useEffect } from 'react';
-import { Container } from 'reactstrap';
+import React, { useRef, useEffect } from "react";
+import { Container } from "reactstrap";
 
 const navLinks = [
   {
-    display: 'Home',
-    url: '#home',
+    display: "Home",
+    url: "#home",
   },
   {
-    display: 'About',
-    url: '#about',
+    display: "About",
+    url: "#about",
   },
   {
-    display: 'Services',
-    url: '#services',
+    display: "Services",
+    url: "#services",
   },
   {
-    display: 'Contact',
-    url: '#contact',
+    display: "Contact",
+    url: "#contact",
   },
 ];
 
-const Header = () => {
+export default function Header() {
   const headerRef = useRef<HTMLElement>(null);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   const bodyScrollTop = () => {
     if (document) {
       return document.body.scrollTop || document.documentElement.scrollTop;
     } else {
       return 0;
     }
-  }
-  
+  };
+
   useEffect(() => {
-    window?.addEventListener('scroll', () => {
+    window?.addEventListener("scroll", () => {
       if (bodyScrollTop() > 80) {
-        headerRef?.current?.classList.add('header__shrink');
+        headerRef?.current?.classList.add("header__shrink");
       } else {
-        headerRef?.current?.classList.remove('header__shrink');
+        headerRef?.current?.classList.remove("header__shrink");
       }
     });
   }, [bodyScrollTop]);
@@ -63,7 +62,9 @@ const Header = () => {
           </div>
 
           <div className="nav__right d-flex align-items-center gap-4">
-            <button className="btn"><span>Let's Talk</span></button>
+            <button className="btn">
+              <span>Let's Talk</span>
+            </button>
             <span className="mobile__menu">
               <i className="ri-menu-2-fill"></i>
             </span>
@@ -72,6 +73,4 @@ const Header = () => {
       </Container>
     </header>
   );
-};
-
-export default Header;
+}

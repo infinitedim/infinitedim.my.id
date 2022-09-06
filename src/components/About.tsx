@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { Container, Row, Col } from 'reactstrap';
-import Education from './Education';
-import Award from './Award';
-import Skills from './Skills';
+import React, { useState } from "react";
+import { Container, Row, Col } from "reactstrap";
+import Education from "./Education";
+import Award from "./Award";
+import Skills from "./Skills";
 
 const About = () => {
-  const [aboutFilter, setAboutFilter] = useState('ABOUT');
+  const [aboutFilter, setAboutFilter] = useState("ABOUT");
 
   return (
     <section id="about">
@@ -17,33 +17,41 @@ const About = () => {
           <Col lg="4" md="3">
             <div className="about__btns d-flex align-items-center flex-column">
               <button
-                className={`about__btn ${aboutFilter === 'ABOUT' ? 'about__btn__active' : ''}`}
-                onClick={() => setAboutFilter('ABOUT')}
+                className={`about__btn ${
+                  aboutFilter === "ABOUT" ? "about__btn__active" : ""
+                }`}
+                onClick={() => setAboutFilter("ABOUT")}
               >
                 About Me
               </button>
               <button
-                className={`about__btn ${aboutFilter === 'EDUCATION' ? 'about__btn__active' : ''}`}
-                onClick={() => setAboutFilter('EDUCATION')}
+                className={`about__btn ${
+                  aboutFilter === "EDUCATION" ? "about__btn__active" : ""
+                }`}
+                onClick={() => setAboutFilter("EDUCATION")}
               >
                 Education
               </button>
               <button
-                className={`about__btn ${aboutFilter === 'SKILLS' ? 'about__btn__active': ''}`}
-                onClick={() => setAboutFilter('SKILLS')}
+                className={`about__btn ${
+                  aboutFilter === "SKILLS" ? "about__btn__active" : ""
+                }`}
+                onClick={() => setAboutFilter("SKILLS")}
               >
                 Skills
               </button>
               <button
-                className={`about__btn ${aboutFilter === 'AWARD' ? 'about__btn__active' : ''}`}
-                onClick={() => setAboutFilter('AWARD')}
+                className={`about__btn ${
+                  aboutFilter === "AWARD" ? "about__btn__active" : ""
+                }`}
+                onClick={() => setAboutFilter("AWARD")}
               >
                 Award
               </button>
             </div>
           </Col>
           <Col lg="8" md="9">
-            {aboutFilter === 'ABOUT' && (
+            {aboutFilter === "ABOUT" && (
               <div className="about__content__wrapper d-flex gap-5 align-items-center">
                 <div className="about__img">
                   <img
@@ -91,9 +99,9 @@ const About = () => {
                 </div>
               </div>
             )}
-            {aboutFilter === 'EDUCATION' && <Education />}
-            {aboutFilter === 'SKILLS' && <Skills />}
-            {aboutFilter === 'AWARD' && <Award />}
+            {aboutFilter === "EDUCATION" && <Education />}
+            {aboutFilter === "SKILLS" && <Skills />}
+            {aboutFilter === "AWARD" && <Award />}
           </Col>
         </Row>
       </Container>
