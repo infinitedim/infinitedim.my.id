@@ -1,8 +1,18 @@
 import React from "react";
-import Layout from "./components/Layout/Layout";
+import Header from "./Components/Header";
+import Hero from "./Components/Hero";
+import About from "./Components/About";
+import Services from "./Components/Services";
+import Footer from "./Components/Footer";
 
-function App() {
-  return <Layout />;
+export default function App() {
+  return (
+    <React.Fragment>
+      <Header />
+      <Hero />
+      <About />
+      <Services />
+      <Footer />
+    </React.Fragment>
+  );
 }
-
-export default App;

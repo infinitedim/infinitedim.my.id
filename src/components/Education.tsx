@@ -28,12 +28,12 @@ const educationData: EducationTypes[] = [
   },
 ];
 
-type educationItemProps = {
+interface educationItemProps {
   degree: string;
   department: string;
   institute: string;
   year: string;
-};
+}
 
 const EducationItem = ({
   degree,

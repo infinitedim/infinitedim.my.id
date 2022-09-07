@@ -4,7 +4,7 @@ import Education from "./Education";
 import Award from "./Award";
 import Skills from "./Skills";
 
-const About = () => {
+export default function About() {
   const [aboutFilter, setAboutFilter] = useState("ABOUT");
 
   return (
@@ -107,6 +107,4 @@ const About = () => {
       </Container>
     </section>
   );
-};
-
-export default About;
+}

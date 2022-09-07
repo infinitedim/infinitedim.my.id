@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 
 interface SkillsTypes {
   title: string;
@@ -49,17 +49,17 @@ const backendSkills: SkillsTypes[] = [
   },
 ];
 
-type SkillItemProps = {
+interface SkillItemProps {
   title: string;
   percentage: string;
   level: string;
-};
+}
 
 const SkillItem = ({
   title,
   percentage,
   level,
-}: SkillItemProps): React.ReactElement => {
+}: SkillItemProps): ReactElement => {
   return (
     <div className="skill__data mb-3">
       <div className="skill__title d-flex align-items-center justify-content-between">

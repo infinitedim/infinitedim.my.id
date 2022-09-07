@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import sc_251 from "../assets/sc_251.jpg";
 import sc_123 from "../assets/sc_123.jpg";
 import sc_315 from "../assets/sc_315.jpg";
@@ -33,17 +33,13 @@ const awardData: AwardTypes[] = [
   },
 ];
 
-type AwardItemProps = {
+interface AwardItemProps {
   image: string;
   title: string;
   year: string;
-};
+}
 
-const AwardItem = ({
-  image,
-  title,
-  year,
-}: AwardItemProps): React.ReactElement => {
+const AwardItem = ({ image, title, year }: AwardItemProps): ReactElement => {
   return (
     <div className="award__item">
       <div className="award__card">
@@ -57,7 +53,7 @@ const AwardItem = ({
   );
 };
 
-const Award = () => {
+export default function Award() {
   return (
     <div className="award__container d-flex align-items-center flex-wrap justify-content-between">
       {awardData.map((item, index) => {
@@ -72,6 +68,4 @@ const Award = () => {
       })}
     </div>
   );
-};
-
-export default Award;
+}

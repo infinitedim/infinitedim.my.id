@@ -1,5 +1,5 @@
-import React from "react";
 import { Container, Row, Col } from "reactstrap";
+import React, { ReactElement } from "react";
 
 interface ServicesTypes {
   icon: string;
@@ -30,17 +30,17 @@ const servicesData: ServicesTypes[] = [
   },
 ];
 
-type ServicesItemProps = {
+interface ServicesItemProps {
   icon: string;
   title: string;
   desc: string;
-};
+}
 
 const ServicesItem = ({
   icon,
   title,
   desc,
-}: ServicesItemProps): React.ReactElement => {
+}: ServicesItemProps): ReactElement => {
   return (
     <Col lg="4" md="6" sm="6">
       <div className="services__card">
@@ -59,7 +59,7 @@ export default function Services() {
     <section id="services">
       <Container>
         <Row>
-          <Col lg="12" className="services__top mb-5">
+          <Col lg="12" className="services__top">
             <h2>What Service I Provide</h2>
           </Col>
           {servicesData.map((item, index) => {

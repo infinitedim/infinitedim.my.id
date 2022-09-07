@@ -22,7 +22,7 @@ const navLinks = [
 
 export default function Header() {
   const headerRef = useRef<HTMLElement>(null);
-  const bodyScrollTop = () => {
+  const bodyScrollTop = (): number => {
     if (document) {
       return document.body.scrollTop || document.documentElement.scrollTop;
     } else {
