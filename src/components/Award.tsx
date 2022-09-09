@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { ReactElement } from "react";
 import sc_251 from "../assets/sc_251.jpg";
 import sc_123 from "../assets/sc_123.jpg";
@@ -5,7 +6,7 @@ import sc_315 from "../assets/sc_315.jpg";
 import sc_163 from "../assets/sc_163.jpg";
 
 interface AwardTypes {
-  image: any;
+  image: string;
   title: string;
   year: string;
 }
@@ -34,7 +35,7 @@ const awardData: AwardTypes[] = [
 ];
 
 interface AwardItemProps {
-  image: any;
+  image: string;
   title: string;
   year: string;
 }

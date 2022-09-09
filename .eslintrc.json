@@ -41,7 +41,7 @@
       "error",
       {
         "endOfLine": "auto",
-        "singleQuote": "false"
+        "singleQuote": false
       }
     ],
     "@typescript-eslint/explicit-function-return-type": "off",

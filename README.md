@@ -34,7 +34,7 @@
 
 ```bash
     // development server
-    yarn start
+    yarn dev
 
     // production build
     yarn build
@@ -53,17 +53,16 @@
 
 #
 
-## ʞɔɐʇS ɥɔǝ┴
+## Stack
 
 - <p>React JS</p>
 - <p>Bootstrap</p>
 
-## ǝƃɐʞɔɐԀ ɹǝɥʇou∀
+## Another Packages
 
 - <p>iTyped.js</p>
 - <p>React Slick</p>
 - <p> Remixicon </p>
-
 
 ## Contributing
 

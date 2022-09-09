@@ -17,6 +17,6 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "src/components", "src/images.d.ts"],
+  "include": ["src/components", "src/images.d.ts"],
   "exclude": ["node_modules", "build"]
 }

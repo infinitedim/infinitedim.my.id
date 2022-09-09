@@ -1,5 +1,5 @@
 import { Container, Row, Col } from "reactstrap";
-import React, { ReactElement } from "react";
+import { ReactElement } from "react";
 
 interface ServicesTypes {
   icon: string;

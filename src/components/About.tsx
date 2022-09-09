@@ -81,8 +81,8 @@ export default function About() {
                       </a>
                     </span>
                     <span>
-                      <a href="/#">
-                        <i className="ri-youtube-line"></i>
+                      <a href="https://twitte.com/yourbloo/">
+                        <i className="ri-twitter-line"></i>
                       </a>
                     </span>
                     <span>

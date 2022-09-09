@@ -18,7 +18,8 @@
 
 .logo h5
   font-size: 1.3rem
-  color: color('primary') // => #7865ff
+  color: color('primary')
+  margin: 3px 0 0 0
 
 .nav
   &__menu
@@ -71,6 +72,10 @@
     cursor: pointer
 
 // tab screen
+@media screen and ( max-width: 786px )
+  .nav
+    &__list
+      width: 70%
 
 // mobile screen 
 @media screen and (max-width: 576px)
