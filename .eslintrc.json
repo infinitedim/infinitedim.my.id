@@ -25,12 +25,14 @@
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module",
-    "project": "./tsconfig.json",
+    "project": ["./tsconfig.json"],
+    "tsconfigRootDir": "c:/dev/portfolio",
     "ecmaFeatures": {
       "jsx": true
     }
   },
-  "plugins": ["react", "prettier", "@typescript-eslint"],
+  "ignorePatterns": ["/*.*"],
+  "plugins": ["react", "prettier", "@typescript-eslint/eslint-plugin"],
   "rules": {
     "react/react-in-jsx-scope": "off",
     "react/no-unescaped-entities": "off",
@@ -38,12 +40,13 @@
     "prettier/prettier": [
       "error",
       {
-        "endOfLine": "auto"
+        "endOfLine": "auto",
+        "singleQuote": "false"
       }
     ],
     "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-explicit-any": "error",
     "@typescript-eslint/strict-boolean-expressions": "off",
-    "@typescript-eslint/no-unsafe-assignment": "off"
+    "@typescript-eslint/no-unsafe-assignment": "error"
   }
 }
