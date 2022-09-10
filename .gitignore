@@ -2,6 +2,7 @@
 # Created by https://www.toptal.com/developers/gitignore/api/react,macos,linux,node,yarn,windows
 # Edit at https://www.toptal.com/developers/gitignore?templates=react,macos,linux,node,yarn,windows
 
+
 ### Linux ###
 *~
 
@@ -90,6 +91,7 @@ bower_components
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
+build
 
 # Dependency directories
 node_modules/
