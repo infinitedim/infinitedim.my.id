@@ -9,22 +9,22 @@ interface EducationTypes {
 
 const educationData: EducationTypes[] = [
   {
-    degree: "Vocational High School",
+    degree: "Elementary School",
+    department: "Bogor",
+    institute: "SDN Antajaya 02",
+    year: "2010 - 2016",
+  },
+  {
+    degree: "Junior High School",
     department: "Bekasi",
     institute: "Yapenhas Boedi Luhur",
-    year: "2022",
+    year: "2016 - 2019",
   },
   {
     degree: "Vocational High School",
     department: "Bekasi",
     institute: "Yapenhas Boedi Luhur",
-    year: "2022",
-  },
-  {
-    degree: "Vocational High School",
-    department: "Bekasi",
-    institute: "Yapenhas Boedi Luhur",
-    year: "2022",
+    year: "2019 - 2022",
   },
 ];
 

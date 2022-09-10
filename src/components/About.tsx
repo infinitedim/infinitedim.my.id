@@ -1,8 +1,47 @@
-import React, { useState } from "react";
+import { ReactElement, useState } from "react";
 import { Container, Row, Col } from "reactstrap";
 import Education from "./Education";
 import Award from "./Award";
 import Skills from "./Skills";
+
+interface SocialTypes {
+  icon: string;
+  link: string;
+}
+
+const socialData: SocialTypes[] = [
+  {
+    icon: "ri-instagram-line",
+    link: "https://instagram.com/infinite.dim_",
+  },
+  {
+    icon: "ri-twitter-line",
+    link: "https://twitte.com/yourblooo",
+  },
+  {
+    icon: "ri-linkedin-line",
+    link: "https://instagram.com/infinite.dim_",
+  },
+  {
+    icon: "ri-github-line",
+    link: "https://github.com/infinitedim",
+  },
+];
+
+interface SocialItemProps {
+  icon: string;
+  link: string;
+}
+
+const SocialItem = ({ icon, link }: SocialItemProps): ReactElement => {
+  return (
+    <span>
+      <a href={link}>
+        <i className={icon}></i>
+      </a>
+    </span>
+  );
+};
 
 export default function About() {
   const [aboutFilter, setAboutFilter] = useState("ABOUT");
@@ -61,40 +100,23 @@ export default function About() {
                   />
                 </div>
                 <div className="about__content">
-                  <h2>I'm Dimas Saputra</h2>
+                  <h2>Dimas Saputra</h2>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Illum adipisci commodi dolore tenetur ad. Adipisci vero
-                    cupiditate quia, optio incidunt est. Quas eveniet distinctio
-                    explicabo molestias nesciunt, dolore labore maxime!
+                    fresh graduate of a vocational high school in the field of
+                    computer and network technology, I am a programming and
+                    networking enthusiast
                   </p>
                   <div className="social__links">
                     <h6 className="mb-3">Connect With Me</h6>
-                    <span>
-                      <a href="https://insagram.com/infinite.dim_">
-                        <i className="ri-instagram-line"></i>
-                      </a>
-                    </span>
-                    <span>
-                      <a href="/#">
-                        <i className="ri-facebook-line"></i>
-                      </a>
-                    </span>
-                    <span>
-                      <a href="https://twitte.com/yourbloo/">
-                        <i className="ri-twitter-line"></i>
-                      </a>
-                    </span>
-                    <span>
-                      <a href="https://github.com/infinitedim">
-                        <i className="ri-github-line"></i>
-                      </a>
-                    </span>
-                    <span>
-                      <a href="https://linkedin.com/in/infinitedim">
-                        <i className="ri-linkedin-line"></i>
-                      </a>
-                    </span>
+                    {socialData.map((item, index) => {
+                      return (
+                        <SocialItem
+                          key={index.toString()}
+                          icon={item.icon}
+                          link={item.link}
+                        />
+                      );
+                    })}
                   </div>
                 </div>
               </div>

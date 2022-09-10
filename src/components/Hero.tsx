@@ -33,9 +33,9 @@ export default function Hero() {
                 I'm <span ref={textRef}></span>
               </h2>
               <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. At
-                labore assumenda asperiores velit excepturi animi molestiae
-                debitis mollitia repudiandae voluptas?
+                fresh graduate of a vocational high school in the field of
+                computer and network technology, I am a programming and
+                networking enthusiast
               </p>
             </div>
 
@@ -52,8 +52,7 @@ export default function Hero() {
             <div className="hero__img">
               <img
                 src="https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
-                alt=""
-                className="w-100"
+                alt="My Images"
               />
             </div>
           </Col>
