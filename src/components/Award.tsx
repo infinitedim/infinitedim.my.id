@@ -5,6 +5,9 @@ import sc_251 from "../assets/sc_251.jpg";
 import sc_123 from "../assets/sc_123.jpg";
 import sc_315 from "../assets/sc_315.jpg";
 import sc_163 from "../assets/sc_163.jpg";
+import sc_256 from "../assets/sc_256.jpg";
+import sc_403 from "../assets/sc_403.jpg";
+import sc_169 from "../assets/sc_169.jpg";
 
 interface AwardTypes {
   image: string;
@@ -15,23 +18,38 @@ interface AwardTypes {
 const awardData: AwardTypes[] = [
   {
     image: sc_123,
-    title: "Web Programming Fundamental",
-    year: "2021",
+    title: "Belajar Dasar Pemrograman Web",
+    year: "2022",
   },
   {
     image: sc_315,
-    title: "Frontend Web For Beginer",
+    title: "Belajar Membuat Frontend Web Untuk Pemula",
     year: "2021",
   },
   {
     image: sc_163,
-    title: "Frontend Web Fundamental",
+    title: "Belajar Fundamental Frontend Web Development",
     year: "2021",
   },
   {
     image: sc_251,
     title: "Cloud Practitioner Essentials",
     year: "2021",
+  },
+  {
+    image: sc_169,
+    title: "Belajar Prinsip Pemrograman SOLID",
+    year: "2022",
+  },
+  {
+    image: sc_403,
+    title: "Membuat Aplikasi Web Dengan React",
+    year: "2022",
+  },
+  {
+    image: sc_256,
+    title: "Belajar Dasar Pemrograman Javascript",
+    year: "2022",
   },
 ];
 

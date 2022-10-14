@@ -27,7 +27,9 @@
     "sourceType": "module",
     "project": "./tsconfig.json",
     "ecmaFeatures": {
-      "jsx": true
+      "jsx": true,
+      "arrowFunctions": true,
+      "modules": true
     }
   },
   "plugins": ["react", "prettier", "@typescript-eslint/eslint-plugin"],
@@ -43,8 +45,9 @@
       }
     ],
     "@typescript-eslint/explicit-function-return-type": "off",
-    "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-implicit-any": "off",
     "@typescript-eslint/strict-boolean-expressions": "off",
-    "@typescript-eslint/no-unsafe-assignment": "error"
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "@typescript-eslint/no-floating-promises": "off"
   }
 }
