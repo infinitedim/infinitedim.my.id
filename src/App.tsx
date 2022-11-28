@@ -1,15 +1,33 @@
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Services from "./components/Services";
+import { Routes, Route } from "react-router-dom";
+import { lazy, Suspense } from "react";
 
-export default function App() {
+// Import pages
+const Home = lazy(
+  async (): Promise<typeof import("c:/dev/portfolio/src/pages/Home")> =>
+    await import("./pages/Home"),
+);
+const Contact = lazy(
+  async (): Promise<typeof import("c:/dev/portfolio/src/pages/Contact")> =>
+    await import("./pages/Contact"),
+);
+const Portfolio = lazy(
+  async (): Promise<typeof import("c:/dev/portfolio/src/pages/Portfolio")> =>
+    await import("./pages/Portfolio"),
+);
+const Resume = lazy(
+  async (): Promise<typeof import("c:/dev/portfolio/src/pages/Resume")> =>
+    await import("./pages/Resume"),
+);
+
+export default function App(): JSX.Element {
   return (
-    <>
-      <Header />
-      <Hero />
-      <About />
-      <Services />
-    </>
+    <Suspense>
+      <Routes>
+        <Route
+          path="/"
+          element={<Home />}
+        />
+      </Routes>
+    </Suspense>
   );
 }
