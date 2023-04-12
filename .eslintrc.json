@@ -1,48 +1,82 @@
 {
+  "$schema": "https://json.schemastore.org/eslintrc",
   "env": {
     "browser": true,
     "es2021": true,
     "node": true
   },
   "extends": [
-    "standard-with-typescript",
+    "next/core-web-vitals",
+    "plugin:react/recommended",
     "prettier",
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier"
+    "airbnb",
+    "next",
+    "plugin:prettier/recommended"
   ],
-  "parser": "@typescript-eslint/parser",
-  "overrides": [
-    {
-      "files": ["*.ts", "*.tsx"],
-      "extends": [
-        "plugin:@typescript-eslint/recommended",
-        "plugin:@typescript-eslint/recommended-requiring-type-checking"
-      ]
+  "settings": {
+    "react": {
+      "version": "detect"
     }
-  ],
-  "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module",
-    "project": ["./tsconfig.json"]
   },
-  "plugins": ["prettier", "@typescript-eslint", "react"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "prettier",
+    "react",
+    "react-hooks",
+    "import",
+    "promise",
+    "jsx-a11y"
+  ],
   "rules": {
-    "quotes": ["error", "double"],
-    "@typescript-eslint/quotes": ["error", "double"],
-    "semi": ["error", "always"],
-    "@typescript-eslint/semi": ["error", "always"],
+    "quotes": [2, "double"],
+    "semi": [2, "always"],
+    "@typescript-eslint/quotes": [2, "double"],
+    "@typescript-eslint/semi": [2, "always"],
+    "@typescript-eslint/strict-boolean-expressions": 0,
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "react/jsx-no-bind": 0,
+    "react/react-in-jsx-scope": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/prefer-default-export": 0,
+    "import/extensions": 0,
+    "import/no-anonymous-default-export": 0,
+    "@next/next/no-html-link-for-pages": [2, "src/app"],
+    "react/jsx-filename-extension": [
+      1,
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ],
+    "react/require-default-props": 0,
+    "react/jsx-props-no-spreading": 0,
     "prettier/prettier": [
-      "error",
+      2,
       {
         "semi": true,
         "tabWidth": 2,
         "printWidth": 80,
-        "endOfLine": "auto",
-        "singleAttributePerLine": true,
         "singleQuote": false,
         "jsxSingleQuote": false,
+        "singleAttributesPerLine": true,
+        "endOfLine": "auto",
         "trailingComma": "all"
+      }
+    ],
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": [
+          "function-declaration",
+          "function-expression",
+          "arrow-function"
+        ],
+        "unnamedComponents": ["function-expression", "arrow-function"]
       }
     ]
   }
