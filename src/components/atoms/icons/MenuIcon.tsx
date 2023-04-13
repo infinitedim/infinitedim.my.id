@@ -8,11 +8,18 @@ export const MenuIcon: FC<IconProps> = ({
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className={className}
+      fill="none"
       viewBox="0 0 24 24"
+      strokeWidth={1.5}
+      stroke="currentColor"
+      className={className}
       {...props}
     >
-      <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z" />
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M3.75 9h16.5m-16.5 6.75h16.5"
+      />
     </svg>
   );
 };

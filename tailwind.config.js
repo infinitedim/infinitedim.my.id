@@ -10,6 +10,18 @@ module.exports = {
         "2xl": "1360px",
       },
     },
+    screens: {
+      phone: "576px",
+      // => @media (min-width: 576px) { ... }
+      tablet: "768px",
+      // => @media (min-width: 768px) { ... }
+      laptop: "1024px",
+      // => @media (min-width: 1024px) { ... }
+      desktop: "1200px",
+      // => @media (min-width: 1200px) { ... }
+      "2xl": "1400px",
+      // => @media (min-width: 1400px) { ... }
+    },
     extend: {
       fontFamily: {
         sans: ["Inter", "sans-serif"],

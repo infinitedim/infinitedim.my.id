@@ -1,23 +1,17 @@
-import { FC, forwardRef, memo } from "react";
+import { FC, memo } from "react";
 import { cn } from "@/utils";
-import { paragraphVariants } from "@/libs";
 import { ParagraphProps } from "@/interfaces";
 
-const Paragraph: FC<ParagraphProps> = forwardRef<
-  HTMLParagraphElement,
-  ParagraphProps
->(({ className, size, children, ...props }, ref) => {
+const Paragraph: FC<ParagraphProps> = ({ className, children, ...props }) => {
   return (
     <p
-      className={cn(paragraphVariants({ size, className }))}
-      ref={ref}
+      className={cn(className)}
       {...props}
     >
       {children}
     </p>
   );
-});
-
+};
 Paragraph.displayName = "Paragraph";
 
 export default memo(Paragraph);

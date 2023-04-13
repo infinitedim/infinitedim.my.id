@@ -1,35 +1,36 @@
 import { BreakpointType } from "@/interfaces";
+import "@total-typescript/ts-reset";
 
 export const getBreakpoint = (): string => {
   const breakpoints: BreakpointType[] = [
     {
       name: "xs",
       min: 0,
-      max: 639,
+      max: 575,
     },
     {
       name: "sm",
-      min: 640,
+      min: 576,
       max: 767,
     },
     {
       name: "md",
       min: 768,
-      max: 991,
+      max: 1023,
     },
     {
       name: "lg",
-      min: 992,
-      max: 1279,
+      min: 1024,
+      max: 1199,
     },
     {
       name: "xl",
-      min: 1280,
-      max: 1535,
+      min: 1200,
+      max: 1399,
     },
     {
       name: "2xl",
-      min: 1536,
+      min: 1400,
       max: Infinity,
     },
   ];

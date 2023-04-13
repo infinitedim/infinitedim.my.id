@@ -1,7 +1,9 @@
 import { Inter } from "next/font/google";
 import { ReactNode } from "react";
 import "@/styles/globals.css";
+import "@total-typescript/ts-reset";
 import Navbar from "@/components/Navbar";
+import { cn } from "@/utils";
 
 /**
  * @type {import("next").NextFont}
@@ -18,8 +20,12 @@ const inter = Inter({
  */
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={inter.className} translate="yes">
-      <body className="max-w-7xl">
+    <html
+      lang="en"
+      className={inter.className}
+      translate="yes"
+    >
+      <body className={cn("max-w-7xl text-mood-gray")}>
         <main>
           <Navbar />
           {children}
