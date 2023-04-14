@@ -11,7 +11,8 @@
     "prettier",
     "airbnb",
     "next",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:tailwindcss/recommended"
   ],
   "settings": {
     "react": {
@@ -33,7 +34,8 @@
     "prettier",
     "promise",
     "react",
-    "react-hooks"
+    "react-hooks",
+    "tailwindcss"
   ],
   "rules": {
     "quotes": [2, "double"],
@@ -55,6 +57,15 @@
     ],
     "react/require-default-props": 0,
     "react/jsx-props-no-spreading": 0,
+    "tailwindcss/no-custom-classname": 0,
+    "tailwindcss/classnames-order": [
+      2,
+      {
+        "callees": ["classnames", "clsx", "ctl", "cva", "tv", "cn"],
+        "removeDuplicates": true,
+        "skipClassAttribute": true
+      }
+    ],
     "prettier/prettier": [
       2,
       {

@@ -24,20 +24,20 @@ const Navbar: FC = () => {
   return (
     <nav
       className={cn(
-        "flex justify-between items-center max-w-5xl py-6 container",
+        "container flex max-w-5xl items-center justify-between py-6",
       )}
     >
       <Link
-        className={cn("brand flex justify-center items-center gap-1")}
+        className={cn("brand flex items-center justify-center gap-1")}
         href="/"
       >
         <CommandIcon className={cn("h-[30px] w-[30px]")} />
         <Heading className="font-bold text-2xl">Dimas Saputra</Heading>
       </Link>
-      <MenuIcon className={cn("h-8 w-8 mr-5 laptop:hidden")} />
+      <MenuIcon className={cn("laptop:hidden mr-5 h-8 w-8")} />
       <ul
         className={cn(
-          "laptop:flex phone:hidden items-center justify-between w-2/5",
+          "laptop:flex phone:hidden w-2/5 items-center justify-between",
         )}
       >
         {menuItem.map((item) => (
@@ -45,7 +45,7 @@ const Navbar: FC = () => {
             href={item.name.toLowerCase()}
             // eslint-disable-next-line react/no-array-index-key
             key={Math.floor(Math.random() * 62859021739509)}
-            className={cn("text-xl opacity-70 hover:opacity-100 font-semibold")}
+            className={cn("text-xl font-semibold opacity-70 hover:opacity-100")}
           >
             {item.name}
           </Link>

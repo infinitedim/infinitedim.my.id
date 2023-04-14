@@ -52,7 +52,7 @@ export default function page() {
     <div className={cn("phone:container max-w-5xl")}>
       <div
         className={cn(
-          "phone:container mb-5 justify-center tablet:px-10 flex items-center p-5",
+          "phone:container tablet:px-10 mb-5 flex items-center justify-center p-5",
         )}
       >
         <Image
@@ -65,25 +65,25 @@ export default function page() {
           aria-label="Hero Images"
           priority
         />
-        <Heading className="phone:line-clamp-3 laptop:line-clamp-2 phone:text-5xl laptop:text-6xl font-black text-mood-gray">
+        <Heading className="phone:line-clamp-3 laptop:line-clamp-2 phone:text-5xl laptop:text-6xl text-mood-gray font-black">
           {/* eslint-disable-next-line react/no-unescaped-entities */}
           What's going on here?
         </Heading>
       </div>
-      <div className={cn("mt-4 mx-2")}>
-        <Heading className="font-black phone:text-5xl laptop:text-6xl mb-5 text-mood-gray">
+      <div className={cn("mx-2 mt-4")}>
+        <Heading className="phone:text-5xl laptop:text-6xl text-mood-gray mb-5 font-black">
           This is my portfolio
         </Heading>
-        <Paragraph className="font-medium laptop:p-2 laptop:mt-2 phone:text-3xl laptop:text-4xl phone:line-clamp-4 text-mood-gray tracking-tighter">
+        <Paragraph className="laptop:p-2 laptop:mt-2 phone:text-3xl laptop:text-4xl phone:line-clamp-4 text-mood-gray font-medium tracking-tighter">
           Well hello people, my name is Dimas Saputra, i am a junior frontend
           developer especially ReactJS. based in Bekasi, Indonesia
         </Paragraph>
       </div>
-      <div className={cn("flex items-center justify-start gap-x-5 mt-7 mx-2")}>
-        <Button className="px-16 py-5 rounded-[10px] bg-mood-gray text-custom-white-900 font-medium hover:bg-custom-black-900 transition-all duration-[250ms]">
+      <div className={cn("mx-2 mt-7 flex items-center justify-start gap-x-5")}>
+        <Button className="bg-mood-gray text-custom-white-900 hover:bg-custom-black-900 rounded-[10px] px-16 py-5 font-medium transition-all duration-[250ms]">
           <Link href="/assets/pdf/resume.pdf">Resume</Link>
         </Button>
-        <Button className="px-16 py-5 rounded-[10px] border-2 border-mood-gray text-mood-gray font-medium hover:bg-mood-gray hover:text-custom-white-900 transition-all duration-[250ms]">
+        <Button className="border-mood-gray text-mood-gray hover:bg-mood-gray hover:text-custom-white-900 rounded-[10px] border-2 px-16 py-5 font-medium transition-all duration-[250ms]">
           <Link href="https://github.com/infinitedim">Github</Link>
         </Button>
       </div>
