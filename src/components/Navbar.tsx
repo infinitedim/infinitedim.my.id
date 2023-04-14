@@ -2,7 +2,7 @@ import Link from "next/link";
 import { FC } from "react";
 import { cn } from "@/utils";
 import { CommandIcon, Heading, MenuIcon } from "./atoms";
-import "@total-typescript/ts-reset";
+// import "@total-typescript/ts-reset";
 
 const Navbar: FC = () => {
   interface menuItemTypes {
@@ -32,7 +32,7 @@ const Navbar: FC = () => {
         href="/"
       >
         <CommandIcon className={cn("h-[30px] w-[30px]")} />
-        <Heading className={cn("font-bold text-2xl")}>Dimas Saputra</Heading>
+        <Heading className="font-bold text-2xl">Dimas Saputra</Heading>
       </Link>
       <MenuIcon className={cn("h-8 w-8 mr-5 laptop:hidden")} />
       <ul

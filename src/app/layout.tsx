@@ -25,11 +25,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       className={inter.className}
       translate="yes"
     >
-      <body className={cn("max-w-7xl text-mood-gray")}>
-        <main>
-          <Navbar />
-          {children}
-        </main>
+      <body className={cn("max-w-7xl text-mood-gray font-sans")}>
+        <Navbar />
+        <main>{children}</main>
       </body>
     </html>
   );

@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 import { Button, Heading, Paragraph } from "@/components/atoms";
 import { cn } from "@/utils";
-import Sapiens from "../../public/hero.svg";
+import Sapiens from "@/public/assets/svg/hero.svg";
 import "@total-typescript/ts-reset";
 
 /**
@@ -81,7 +81,7 @@ export default function page() {
       </div>
       <div className={cn("flex items-center justify-start gap-x-5 mt-7 mx-2")}>
         <Button className="px-16 py-5 rounded-[10px] bg-mood-gray text-custom-white-900 font-medium hover:bg-custom-black-900 transition-all duration-[250ms]">
-          Resume
+          <Link href="/assets/pdf/resume.pdf">Resume</Link>
         </Button>
         <Button className="px-16 py-5 rounded-[10px] border-2 border-mood-gray text-mood-gray font-medium hover:bg-mood-gray hover:text-custom-white-900 transition-all duration-[250ms]">
           <Link href="https://github.com/infinitedim">Github</Link>

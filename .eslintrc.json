@@ -28,12 +28,12 @@
   },
   "plugins": [
     "@typescript-eslint",
-    "prettier",
-    "react",
-    "react-hooks",
     "import",
+    "jsx-a11y",
+    "prettier",
     "promise",
-    "jsx-a11y"
+    "react",
+    "react-hooks"
   ],
   "rules": {
     "quotes": [2, "double"],
