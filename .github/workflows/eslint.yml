@@ -11,12 +11,12 @@ name: ESLint
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
     # The branches below must be a subset of the branches above
-    branches: [ "main" ]
+    branches: ["main"]
   schedule:
-    - cron: '44 23 * * 3'
+    - cron: "44 23 * * 3"
 
 jobs:
   eslint:
@@ -40,6 +40,7 @@ jobs:
           npm install eslint-config-next
           npm install eslint-config-prettier
           npm install eslint-plugin-import
+          npm install eslint-plugin-jsdoc
           npm install eslint-plugin-jsx-a11y
           npm install eslint-plugin-prettier
           npm install eslint-plugin-promise

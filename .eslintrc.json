@@ -35,7 +35,8 @@
     "promise",
     "react",
     "react-hooks",
-    "tailwindcss"
+    "tailwindcss",
+    "jsdoc"
   ],
   "rules": {
     "quotes": [2, "double"],

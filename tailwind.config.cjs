@@ -11,13 +11,13 @@ module.exports = {
       },
     },
     screens: {
-      phone: "576px",
+      sm: "576px",
       // => @media (min-width: 576px) { ... }
-      tablet: "768px",
+      md: "768px",
       // => @media (min-width: 768px) { ... }
-      laptop: "1024px",
+      lg: "1024px",
       // => @media (min-width: 1024px) { ... }
-      desktop: "1200px",
+      xl: "1200px",
       // => @media (min-width: 1200px) { ... }
       "2xl": "1400px",
       // => @media (min-width: 1400px) { ... }
