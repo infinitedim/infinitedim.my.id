@@ -10,17 +10,21 @@ const Navbar: FC = () => {
   const [isNavMenuOpen, setIsNavMenuOpen] = useState<boolean>(false);
 
   type menuItemType = {
+    anchor: string;
     name: string;
   };
 
   const menuItem: menuItemType[] = [
     {
+      anchor: "about",
       name: "About",
     },
     {
+      anchor: "project",
       name: "Project",
     },
     {
+      anchor: "contact",
       name: "Contact",
     },
   ];
@@ -40,7 +44,9 @@ const Navbar: FC = () => {
         href="/"
       >
         <CommandIcon className={cn("h-[30px] w-[30px]")} />
-        <Heading className="font-bold text-2xl">Dimas Saputra</Heading>
+        <Heading className="font-bold text-2xl lg:text-3xl">
+          Dimas Saputra
+        </Heading>
       </Link>
       <MenuIcon
         className={cn("z-10 h-8 w-8 lg:hidden")}
@@ -50,16 +56,16 @@ const Navbar: FC = () => {
         className={
           isNavMenuOpen
             ? cn(
-                "z-5 bg-custom-white-900 absolute inset-x-0 top-0 flex h-[40vh] w-full translate-y-0 flex-col items-center justify-evenly overflow-y-hidden opacity-100 transition-all duration-500 ease-in-out",
+                "z-5 bg-custom-white-900 absolute inset-x-0 top-0 flex h-[45vh] w-full translate-y-0 flex-col items-center justify-center gap-y-5 overflow-y-hidden opacity-100 transition-all duration-500 ease-in-out lg:hidden",
               )
             : cn(
-                "z-5 bg-custom-white-900 absolute inset-x-0 top-0 flex h-[40vh] w-full -translate-y-full flex-col items-center justify-evenly overflow-y-hidden opacity-100 transition-all duration-500 ease-in-out",
+                "z-5 bg-custom-white-900 absolute inset-x-0 top-0 flex h-[45vh] w-full -translate-y-full flex-col items-center justify-center gap-y-5 overflow-y-hidden opacity-100 transition-all duration-500 ease-in-out lg:hidden",
               )
         }
       >
         {menuItem.map((item) => (
           <Link
-            href={item.name.toLowerCase()}
+            href={item?.anchor}
             // eslint-disable-next-line react/no-array-index-key
             key={Math.floor(Math.random() * 62859021739509)}
             className={cn(

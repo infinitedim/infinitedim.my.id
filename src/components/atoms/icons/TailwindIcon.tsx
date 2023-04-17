@@ -1,5 +1,6 @@
 import { IconProps } from "@/interfaces";
 import { FC, memo } from "react";
+import "@total-typescript/ts-reset";
 
 export const TailwindIcons: FC<IconProps> = ({
   className = "w-6 h-6",

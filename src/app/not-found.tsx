@@ -1,3 +1,5 @@
+import "@total-typescript/ts-reset";
+
 export default function NotFound() {
   return (
     <>

@@ -1,5 +1,6 @@
 import { IconProps } from "@/interfaces";
 import { FC, memo } from "react";
+import "@total-typescript/ts-reset";
 
 export const CommandIcon: FC<IconProps> = ({
   className = "h-6 w-6",

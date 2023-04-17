@@ -1,6 +1,7 @@
 import { ButtonProps } from "@/interfaces";
 import { cn } from "@/utils";
 import { FC, memo } from "react";
+import "@total-typescript/ts-reset";
 
 export const Button: FC<ButtonProps> = ({ children, className, ...props }) => {
   return (

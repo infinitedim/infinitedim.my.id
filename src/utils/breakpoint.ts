@@ -42,5 +42,5 @@ export const getBreakpoint = (): string => {
     (item) => innerWidth >= item.min && innerWidth <= item.max,
   );
 
-  return breakpoint != null ? breakpoint.name : "xl";
+  return breakpoint !== null ? (breakpoint?.name as string) : "xl";
 };
