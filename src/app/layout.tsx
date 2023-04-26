@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import { cn } from "@/utils";
 import "@total-typescript/ts-reset";
 import "@/styles/globals.css";
+import { Analytics } from "@vercel/analytics/react";
 
 /**
  * @description this is a nextjs optimization init
@@ -34,6 +35,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       >
         <Navbar />
         <main className="antialiased">{children}</main>
+        <Analytics />
       </body>
     </html>
   );
