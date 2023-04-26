@@ -2,10 +2,7 @@ import { IconProps } from "@/interfaces";
 import { FC, memo } from "react";
 import "@total-typescript/ts-reset";
 
-export const TailwindIcons: FC<IconProps> = ({
-  className = "w-6 h-6",
-  ...props
-}) => {
+const TailwindIcon: FC<IconProps> = ({ className = "w-6 h-6", ...props }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -18,4 +15,4 @@ export const TailwindIcons: FC<IconProps> = ({
   );
 };
 
-export default memo(TailwindIcons);
+export default memo(TailwindIcon);

@@ -1,9 +1,9 @@
 import { Inter } from "next/font/google";
 import { ReactNode } from "react";
-import "@/styles/globals.css";
 import Navbar from "@/components/Navbar";
 import { cn } from "@/utils";
 import "@total-typescript/ts-reset";
+import "@/styles/globals.css";
 
 /**
  * @description this is a nextjs optimization init
@@ -27,9 +27,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       className={inter.className}
       translate="yes"
     >
-      <body className={cn("text-mood-gray max-w-7xl overflow-x-hidden")}>
+      <body
+        className={cn(
+          "text-mood-gray mx-auto max-w-7xl overflow-x-hidden bg-white antialiased",
+        )}
+      >
         <Navbar />
-        <main>{children}</main>
+        <main className="antialiased">{children}</main>
       </body>
     </html>
   );

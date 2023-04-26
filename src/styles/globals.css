@@ -83,3 +83,24 @@
   src: local("Inter"), local("Inter"),
     url("../fonts/Inter-Black.ttf") format("truetype");
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  border: 1px solid white;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #aaa;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0f172a;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #171717;
+}

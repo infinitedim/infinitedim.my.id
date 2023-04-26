@@ -2,10 +2,7 @@ import { IconProps } from "@/interfaces";
 import { FC, memo } from "react";
 import "@total-typescript/ts-reset";
 
-export const TypescriptIcon: FC<IconProps> = ({
-  className = "h-6 w-6",
-  ...props
-}) => {
+const TypescriptIcon: FC<IconProps> = ({ className = "h-6 w-6", ...props }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

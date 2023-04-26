@@ -56,10 +56,10 @@ const Navbar: FC = () => {
         className={
           isNavMenuOpen
             ? cn(
-                "z-5 bg-custom-white-900 absolute inset-x-0 top-0 flex h-[45vh] w-full translate-y-0 flex-col items-center justify-center gap-y-5 overflow-y-hidden opacity-100 transition-all duration-500 ease-in-out lg:hidden",
+                "z-5 bg-custom-white-900 absolute inset-x-0 top-0 flex h-[45vh] w-full translate-y-0 flex-col items-center justify-center gap-y-5 overflow-hidden opacity-100 transition-all duration-500 ease-in-out lg:hidden",
               )
             : cn(
-                "z-5 bg-custom-white-900 absolute inset-x-0 top-0 flex h-[45vh] w-full -translate-y-full flex-col items-center justify-center gap-y-5 overflow-y-hidden opacity-100 transition-all duration-500 ease-in-out lg:hidden",
+                "z-5 bg-custom-white-900 absolute inset-x-0 top-0 flex h-[45vh] w-full -translate-y-full flex-col items-center justify-center gap-y-5 overflow-hidden opacity-100 transition-all duration-500 ease-in-out lg:hidden",
               )
         }
       >
@@ -70,6 +70,24 @@ const Navbar: FC = () => {
             key={Math.floor(Math.random() * 62859021739509)}
             className={cn(
               "text-mood-gray text-xl font-semibold opacity-70 hover:opacity-100",
+            )}
+          >
+            {item.name}
+          </Link>
+        ))}
+      </ul>
+      <ul
+        className={cn(
+          "hidden w-2/5 lg:flex lg:items-center lg:justify-between",
+        )}
+      >
+        {menuItem.map((item) => (
+          <Link
+            href={item?.anchor}
+            // eslint-disable-next-line react/no-array-index-key
+            key={Math.floor(Math.random() * 62859021739509)}
+            className={cn(
+              "text-mood-gray text-base font-semibold opacity-70 hover:opacity-100",
             )}
           >
             {item.name}
