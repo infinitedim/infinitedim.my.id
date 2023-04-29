@@ -1,13 +1,23 @@
 "use client";
 
 import Link from "next/link";
-import { FC, useState } from "react";
+import { usePathname } from "next/navigation";
+import { FC, useEffect, useState } from "react";
 import { cn } from "@/utils";
-import { CommandIcon, Heading, MenuIcon } from "@/components/atoms";
+import {
+  Button,
+  CloseIcon,
+  CommandIcon,
+  Heading,
+  MenuIcon,
+} from "@/components/atoms";
 import "@total-typescript/ts-reset";
 
 const Navbar: FC = () => {
   const [isNavMenuOpen, setIsNavMenuOpen] = useState<boolean>(false);
+  const dynamicRoute = usePathname();
+
+  useEffect(() => setIsNavMenuOpen(false), [dynamicRoute]);
 
   type menuItemType = {
     anchor: string;
@@ -48,10 +58,17 @@ const Navbar: FC = () => {
           Dimas Saputra
         </Heading>
       </Link>
-      <MenuIcon
-        className={cn("z-10 h-8 w-8 lg:hidden")}
+      <Button
+        title={isNavMenuOpen ? "close nav" : "open nav"}
         onClick={isNavMenuClicked}
-      />
+        className="z-10 lg:hidden"
+      >
+        {isNavMenuOpen ? (
+          <CloseIcon className="h-8 w-8" />
+        ) : (
+          <MenuIcon className="h-8 w-8" />
+        )}
+      </Button>
       <ul
         className={
           isNavMenuOpen

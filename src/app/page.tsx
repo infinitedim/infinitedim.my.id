@@ -6,13 +6,11 @@ import {
   GitForkIcon,
   Heading,
   Paragraph,
-  ReactIcon,
-  TailwindIcon,
-  TypescriptIcon,
 } from "@/components/atoms";
 import { cn } from "@/utils";
 import Sapiens from "@/public/assets/svg/hero.svg";
 import "@total-typescript/ts-reset";
+import { projects } from "@/constants";
 
 /**
  * @description This is the main metadata in this pages
@@ -118,66 +116,70 @@ export default function page() {
           </Paragraph>
         </div>
         <div className="container max-w-5xl mx-auto">
-          <div
-            id="card"
-            className="my-7 mx-auto w-[90%] py-5 bg-[#ededed] rounded-[10px] shadow-[5px_5px_4px_rgba(0,0,0,0.25)]"
-          >
-            <div
-              className={cn(
-                "mx-auto mb-5 flex w-[90%] items-center justify-between",
-              )}
-            >
-              <Heading
-                title="card title"
-                className="text-2xl font-bold"
+          {projects.map((project) => {
+            return (
+              <div
+                id="card"
+                className="my-7 mx-auto w-full md:w-[90%] py-5 bg-[#ededed] rounded-[10px] shadow-[5px_5px_4px_rgba(0,0,0,0.25)]"
+                key={Math.floor(Math.random() * 6281034723094)}
               >
-                Miolica
-              </Heading>
-              <div className={cn("flex items-center justify-between gap-x-2")}>
-                <Link
-                  href="https://miolica.vercel.app"
-                  title="visit my page"
+                <div
+                  className={cn(
+                    "mx-auto mb-5 flex w-[90%] items-center justify-between",
+                  )}
                 >
-                  <ExtLinkIcon />
-                </Link>
-                <Link
-                  href="https://github.com/infnitedim/ecommerce"
-                  title="fork me"
-                >
-                  <GitForkIcon />
-                </Link>
+                  <Heading
+                    title="card title"
+                    className="text-2xl md:text-3xl lg:text-4xl font-bold"
+                  >
+                    {project.title}
+                  </Heading>
+                  <div
+                    className={cn("flex items-center justify-between gap-x-2")}
+                  >
+                    <Link
+                      href={project.url}
+                      title="visit my page"
+                    >
+                      <ExtLinkIcon className="h-8 w-8" />
+                    </Link>
+                    <Link
+                      href={project.repo}
+                      title="fork me"
+                    >
+                      <GitForkIcon className="h-8 w-8" />
+                    </Link>
+                  </div>
+                </div>
+                <div className="mx-auto w-[90%]">
+                  <Paragraph className="font-medium text-base md:text-xl xl:text-2xl mb-5">
+                    {project.description}
+                  </Paragraph>
+                  <Heading
+                    title="Tech stack"
+                    className="mb-2 font-bold text-base md:text-xl lg:text-2xl tracking-tighter"
+                  >
+                    Tech stack:
+                  </Heading>
+                  <ul className="list-stack flex gap-x-2 justify-betweeen items-center">
+                    {project.techStack.map((stack) => {
+                      const Components = stack.icon;
+                      return (
+                        <li
+                          title={stack.name}
+                          key={Math.floor(Math.random() * 628134750394)}
+                        >
+                          <Link href={stack.url}>
+                            <Components className="h-8 w-8" />
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
               </div>
-            </div>
-            <div className="mx-auto w-[90%]">
-              <Paragraph className="font-medium text-base mb-5">
-                Miolica is e-commerce project that offer some features like
-                cart, wishlist, seller, and own shipping system
-              </Paragraph>
-              <Heading
-                title="Tech stack"
-                className="mb-2 font-bold tracking-tighter"
-              >
-                Tech stack:
-              </Heading>
-              <ul className="list-stack flex gap-x-2 justify-betweeen items-center">
-                <li title="react">
-                  <Link href="https://react.dev">
-                    <ReactIcon />
-                  </Link>
-                </li>
-                <li title="react">
-                  <Link href="https://typescriptlang.org">
-                    <TypescriptIcon />
-                  </Link>
-                </li>
-                <li title="react">
-                  <Link href="https://tailwindcss.com">
-                    <TailwindIcon />
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </section>
     </>

@@ -5,3 +5,4 @@ export { default as TailwindIcon } from "./TailwindIcon";
 export { default as TypescriptIcon } from "./TypescriptIcon";
 export { default as CommandIcon } from "./CommandIcon";
 export { default as MenuIcon } from "./MenuIcon";
+export { default as CloseIcon } from "./CloseIcon";

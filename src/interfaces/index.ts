@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { HTMLAttributes } from "react";
+import { HTMLAttributes, NamedExoticComponent } from "react";
 
 export interface IconProps extends HTMLAttributes<SVGSVGElement> {
   color?: string;
@@ -16,4 +16,18 @@ export interface BreakpointType {
   name: string;
   min: number;
   max: number;
+}
+
+export interface TechStackProjects {
+  name: string;
+  url: string;
+  icon: NamedExoticComponent<IconProps>;
+}
+
+export interface ProjectsType {
+  title: string;
+  description: string;
+  url: string;
+  repo: string;
+  techStack: TechStackProjects[];
 }
