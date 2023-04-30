@@ -11,6 +11,7 @@ import {
   Heading,
   MenuIcon,
 } from "@/components/atoms";
+import { menuItem } from "@/constants";
 import "@total-typescript/ts-reset";
 
 const Navbar: FC = () => {
@@ -18,26 +19,6 @@ const Navbar: FC = () => {
   const dynamicRoute = usePathname();
 
   useEffect(() => setIsNavMenuOpen(false), [dynamicRoute]);
-
-  type menuItemType = {
-    anchor: string;
-    name: string;
-  };
-
-  const menuItem: menuItemType[] = [
-    {
-      anchor: "about",
-      name: "About",
-    },
-    {
-      anchor: "project",
-      name: "Project",
-    },
-    {
-      anchor: "contact",
-      name: "Contact",
-    },
-  ];
 
   function isNavMenuClicked() {
     setIsNavMenuOpen(!isNavMenuOpen);
@@ -59,7 +40,7 @@ const Navbar: FC = () => {
         </Heading>
       </Link>
       <Button
-        title={isNavMenuOpen ? "close nav" : "open nav"}
+        title="nav menu"
         onClick={isNavMenuClicked}
         className="z-10 lg:hidden"
       >

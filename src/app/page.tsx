@@ -48,7 +48,7 @@ export const metadata: Metadata = {
 
 /**
  * @description this function is create home page components
- * @returns {ReactNode}
+ * @returns {JSX.Element}
  * @type {JSX.Element}
  */
 export default function page() {
@@ -60,12 +60,11 @@ export default function page() {
       >
         <div
           className={cn(
-            "mb-5 flex items-center justify-center md:mb-20 md:px-10",
+            "container mb-5 flex items-center justify-center md:mb-20 md:px-10",
           )}
         >
           <Image
             src={Sapiens}
-            quality={100}
             className={cn("mt-10 h-2/4 w-2/4")}
             alt="Hero"
             priority
@@ -75,29 +74,31 @@ export default function page() {
             What's going on here?
           </Heading>
         </div>
-        <div className={cn("mt-4 md:container")}>
+        <div className={cn("container mt-4")}>
           <Heading className="text-4xl lg:text-6xl md:text-5xl text-mood-gray mb-5 font-black">
             This is my portfolio
           </Heading>
-          <Paragraph className="lg:p-2 lg:mt-2 text-2xl md:text-3xl mx-2 sm:line-clamp-4 text-mood-gray font-medium tracking-tighter">
+          <Paragraph className="text-2xl md:text-3xl sm:line-clamp-4 text-mood-gray font-medium tracking-tighter">
             Well hello people, my name is Dimas Saputra, i am a junior frontend
             developer especially React. based in Bekasi, Indonesia
           </Paragraph>
         </div>
         <div
           className={cn(
-            "mx-5 mt-7 flex items-center justify-start gap-x-5 md:container md:max-w-5xl",
+            "container mt-7 flex items-center justify-start gap-x-5 md:max-w-5xl",
           )}
         >
           <Link
             href="/assets/pdf/resume.pdf"
             className="bg-mood-gray text-custom-white-900 hover:bg-custom-black-900 rounded-[10px] px-8 py-4 font-medium transition-all duration-[250ms]"
+            title="Resume"
           >
             Resume
           </Link>
           <Link
             href="https://github.com/infinitedim"
             className="border-mood-gray text-mood-gray hover:bg-mood-gray hover:text-custom-white-900 rounded-[10px] border-[1px] px-8 py-4 font-medium transition-all duration-[250ms]"
+            title="Github"
           >
             Github
           </Link>
@@ -129,7 +130,7 @@ export default function page() {
                   )}
                 >
                   <Heading
-                    title="card title"
+                    title={project.title}
                     className="text-2xl md:text-3xl lg:text-4xl font-bold"
                   >
                     {project.title}
@@ -141,13 +142,13 @@ export default function page() {
                       href={project.url}
                       title="visit my page"
                     >
-                      <ExtLinkIcon className="h-8 w-8" />
+                      <ExtLinkIcon className="h-6 w-6 md:h-8 md:w-8" />
                     </Link>
                     <Link
                       href={project.repo}
                       title="fork me"
                     >
-                      <GitForkIcon className="h-8 w-8" />
+                      <GitForkIcon className="h-6 w-6 md:h-8 md:w-8" />
                     </Link>
                   </div>
                 </div>

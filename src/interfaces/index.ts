@@ -31,3 +31,8 @@ export interface ProjectsType {
   repo: string;
   techStack: TechStackProjects[];
 }
+
+export interface menuItemType {
+  anchor: string;
+  name: string;
+}
