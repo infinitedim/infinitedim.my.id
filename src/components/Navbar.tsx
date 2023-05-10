@@ -1,99 +1,40 @@
+/* eslint-disable no-unused-vars */
+
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { FC, useEffect, useState } from "react";
-import { cn } from "@/utils";
-import {
-  Button,
-  CloseIcon,
-  CommandIcon,
-  Heading,
-  MenuIcon,
-} from "@/components/atoms";
+import { CommandIcon, Heading, MenuIcon } from "@/components/atoms";
 import { menuItem } from "@/constants";
+import { Navbar } from "flowbite-react";
 import "@total-typescript/ts-reset";
 
-const Navbar: FC = () => {
-  const [isNavMenuOpen, setIsNavMenuOpen] = useState<boolean>(false);
-  const dynamicRoute = usePathname();
-
-  useEffect(() => setIsNavMenuOpen(false), [dynamicRoute]);
-
-  function isNavMenuClicked() {
-    setIsNavMenuOpen(!isNavMenuOpen);
-  }
-
+const NavbarApp = () => {
   return (
-    <nav
-      className={cn(
-        "container flex max-w-5xl items-center justify-between py-6",
-      )}
+    <Navbar
+      rounded
+      className="max-w-5xl p-5 container top-0 inset-x-0 mx-auto fixed bg-custom-white-900"
     >
-      <Link
-        className={cn("brand z-10 flex items-center justify-center gap-1")}
-        href="/"
-      >
-        <CommandIcon className={cn("h-[30px] w-[30px]")} />
-        <Heading className="font-bold text-2xl lg:text-3xl">
+      <Navbar.Brand href="/">
+        <CommandIcon className="h-6 w-6" />
+        <Heading className="self-center whitespace-nowrap text-2xl md:text-3xl font-bold">
           Dimas Saputra
         </Heading>
-      </Link>
-      <Button
-        title="nav menu"
-        onClick={isNavMenuClicked}
-        className="z-10 lg:hidden"
-      >
-        {isNavMenuOpen ? (
-          <CloseIcon className="h-8 w-8" />
-        ) : (
-          <MenuIcon className="h-8 w-8" />
-        )}
-      </Button>
-      <ul
-        className={
-          isNavMenuOpen
-            ? cn(
-                "z-5 bg-custom-white-900 absolute inset-x-0 top-0 flex h-[45vh] w-full translate-y-0 flex-col items-center justify-center gap-y-5 overflow-hidden opacity-100 transition-all duration-500 ease-in-out lg:hidden",
-              )
-            : cn(
-                "z-5 bg-custom-white-900 absolute inset-x-0 top-0 flex h-[45vh] w-full -translate-y-full flex-col items-center justify-center gap-y-5 overflow-hidden opacity-100 transition-all duration-500 ease-in-out lg:hidden",
-              )
-        }
-      >
+      </Navbar.Brand>
+      <Navbar.Toggle
+        barIcon={MenuIcon}
+        className="focus:ring-0 focus:outline-none h-6 w-6"
+      />
+      <Navbar.Collapse className="transition-all duration-300 ease-in-out">
         {menuItem.map((item) => (
-          <Link
-            href={item?.anchor}
-            // eslint-disable-next-line react/no-array-index-key
-            key={Math.floor(Math.random() * 62859021739509)}
-            className={cn(
-              "text-mood-gray text-xl font-semibold opacity-70 hover:opacity-100",
-            )}
+          <Navbar.Link
+            key={Math.floor(Math.random() * 62819304382729)}
+            href={`/${item.anchor}`}
           >
             {item.name}
-          </Link>
+          </Navbar.Link>
         ))}
-      </ul>
-      <ul
-        className={cn(
-          "hidden w-2/5 lg:flex lg:items-center lg:justify-between",
-        )}
-      >
-        {menuItem.map((item) => (
-          <Link
-            href={item?.anchor}
-            // eslint-disable-next-line react/no-array-index-key
-            key={Math.floor(Math.random() * 62859021739509)}
-            className={cn(
-              "text-mood-gray text-base font-semibold opacity-70 hover:opacity-100",
-            )}
-          >
-            {item.name}
-          </Link>
-        ))}
-      </ul>
-    </nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
 };
 
-export default Navbar;
+export default NavbarApp;

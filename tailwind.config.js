@@ -1,7 +1,12 @@
 /* eslint-disable global-require */
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "./node_modules/flowbite-react/**/*.js",
+    "./pages/**/*.{js,jsx,ts,tsx}",
+    "./public/**/*.html",
+  ],
   theme: {
     container: {
       center: true,
@@ -23,9 +28,6 @@ module.exports = {
       // => @media (min-width: 1400px) { ... }
     },
     extend: {
-      fontFamily: {
-        sans: ["Inter", "sans-serif"],
-      },
       colors: ({ colors }) => ({
         inherit: colors.inherit,
         current: colors.current,
@@ -78,5 +80,9 @@ module.exports = {
       }),
     },
   },
-  plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/forms"),
+    require("flowbite/plugin"),
+  ],
 };

@@ -1,5 +1,6 @@
 /* eslint-disable prettier/prettier */
 import { HTMLAttributes, NamedExoticComponent } from "react";
+import "@total-typescript/ts-reset";
 
 export interface IconProps extends HTMLAttributes<SVGSVGElement> {
   color?: string;
