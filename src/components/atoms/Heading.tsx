@@ -1,16 +1,19 @@
-import { FC, memo } from "react";
+"use client";
+
+import { motion } from "framer-motion";
+import { memo } from "react";
 import { cn } from "@/utils";
-import { HeadingProps } from "@/interfaces";
+import type { HeadingProps } from "@/interfaces";
 import "@total-typescript/ts-reset";
 
-const Heading: FC<HeadingProps> = ({ className, children, ...props }) => {
+const Heading = ({ children, className, ...props }: HeadingProps) => {
   return (
-    <h1
+    <motion.h1
       className={cn(className)}
       {...props}
     >
       {children}
-    </h1>
+    </motion.h1>
   );
 };
 Heading.displayName = "Heading";

@@ -1,17 +1,30 @@
-/* eslint-disable prettier/prettier */
-import { HTMLAttributes, NamedExoticComponent } from "react";
+import type { NamedExoticComponent, ReactNode } from "react";
+import type { HTMLMotionProps, SVGMotionProps, Variants } from "framer-motion";
 import "@total-typescript/ts-reset";
 
-export interface IconProps extends HTMLAttributes<SVGSVGElement> {
-  color?: string;
-  fill?: string;
+export interface AnimationableSVGProps extends SVGMotionProps<SVGSVGElement> {
+  animate?: string;
+  className?: string;
+  initial?: string | boolean;
+  pathVariants?: Variants | undefined;
+  svgVariants?: Variants | undefined;
 }
 
-export interface HeadingProps extends HTMLAttributes<HTMLHeadingElement> {}
+export interface ButtonProps extends HTMLMotionProps<"button"> {
+  children: ReactNode;
+  className?: string;
+  type?: "button" | "reset" | "submit" | undefined;
+}
 
-export interface ParagraphProps extends HTMLAttributes<HTMLParagraphElement> {}
+export interface HeadingProps extends HTMLMotionProps<"h1"> {
+  children: ReactNode;
+  className?: string;
+}
 
-export interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {}
+export interface ParagraphProps extends HTMLMotionProps<"p"> {
+  children: ReactNode;
+  className?: string;
+}
 
 export interface BreakpointType {
   name: string;
@@ -22,7 +35,7 @@ export interface BreakpointType {
 export interface TechStackProjects {
   name: string;
   url: string;
-  icon: NamedExoticComponent<IconProps>;
+  icon: NamedExoticComponent<AnimationableSVGProps>;
 }
 
 export interface ProjectsType {

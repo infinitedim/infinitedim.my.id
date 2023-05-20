@@ -10,6 +10,17 @@
   grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 
+.y-full {
+  transform: translateY(-150%);
+}
+
+.y-zero {
+  transform: translateY(0%);
+}
+
+.map {
+  filter: grayscale(1) contrast(1.2) opacity(0.5);
+}
 /* custom scrollbar */
 
 /* width */

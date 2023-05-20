@@ -1,16 +1,19 @@
-import { FC, memo } from "react";
+"use client";
+
+import { motion } from "framer-motion";
+import { memo } from "react";
 import { cn } from "@/utils";
-import { ParagraphProps } from "@/interfaces";
+import type { ParagraphProps } from "@/interfaces";
 import "@total-typescript/ts-reset";
 
-const Paragraph: FC<ParagraphProps> = ({ className, children, ...props }) => {
+const Paragraph = ({ className, children, ...props }: ParagraphProps) => {
   return (
-    <p
+    <motion.p
       className={cn(className)}
       {...props}
     >
       {children}
-    </p>
+    </motion.p>
   );
 };
 Paragraph.displayName = "Paragraph";

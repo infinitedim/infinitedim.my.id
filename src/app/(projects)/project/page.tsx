@@ -1,6 +1,5 @@
 "use client";
 
-import { Tooltip } from "flowbite-react";
 // import { motion } from "framer-motion";
 import Link from "next/link";
 import type { NamedExoticComponent } from "react";
@@ -11,7 +10,11 @@ import {
   ExtLinkIcon,
   GitForkIcon,
 } from "@/components/atoms";
-import { IconProps, ProjectsType, TechStackProjects } from "@/interfaces";
+import {
+  AnimationableSVGProps,
+  ProjectsType,
+  TechStackProjects,
+} from "@/interfaces";
 import { cn } from "@/utils";
 import "@total-typescript/ts-reset";
 
@@ -41,40 +44,34 @@ export default function Page() {
                   "mx-auto mb-5 flex w-[90%] items-center justify-between",
                 )}
               >
-                <Tooltip
-                  content={project.title}
-                  animation="duration-300"
-                  className="transition-all delay-300"
+                <Heading
+                  className="text-2xl md:text-3xl cursor-pointer lg:text-4xl font-bold"
+                  title={project.title}
                 >
-                  <Heading className="text-2xl md:text-3xl lg:text-4xl font-bold">
-                    {project.title}
-                  </Heading>
-                </Tooltip>
+                  {project.title}
+                </Heading>
                 <div
                   className={cn("flex items-center justify-between gap-x-2")}
                 >
-                  <Tooltip
-                    content="Visit page"
-                    animation="duration-300"
-                    className="transition-all delay-300"
+                  <Link
+                    href={project.url}
+                    title="visit page"
                   >
-                    <Link href={project.url}>
-                      <ExtLinkIcon className="h-6 w-6 md:h-8 md:w-8" />
-                    </Link>
-                  </Tooltip>
-                  <Tooltip
-                    content="View Source"
-                    animation="duration-300"
-                    className="transition-all delay-300"
+                    <ExtLinkIcon className="h-6 w-6 md:h-8 md:w-8" />
+                  </Link>
+                  <Link
+                    href={project.repo}
+                    title="view repo"
                   >
-                    <Link href={project.repo}>
-                      <GitForkIcon className="h-6 w-6 md:h-8 md:w-8" />
-                    </Link>
-                  </Tooltip>
+                    <GitForkIcon className="h-6 w-6 md:h-8 md:w-8" />
+                  </Link>
                 </div>
               </div>
               <div className="mx-auto w-[90%]">
-                <Paragraph className="font-medium text-xl md:text-2xl lg:text-3xl mb-5">
+                <Paragraph
+                  className="font-medium text-xl md:text-2xl lg:text-3xl mb-5"
+                  title={project.description}
+                >
                   {project.description}
                 </Paragraph>
                 <Heading
@@ -85,23 +82,16 @@ export default function Page() {
                 </Heading>
                 <ul className="list-stack flex gap-x-2 justify-betweeen items-center">
                   {project.techStack.map((stack: TechStackProjects) => {
-                    const Components: NamedExoticComponent<IconProps> =
+                    const Icons: NamedExoticComponent<AnimationableSVGProps> =
                       stack.icon;
                     return (
                       <li key={Math.floor(Math.random() * 628134750394)}>
-                        <Tooltip
-                          content={stack.name}
-                          animation="duration-300"
-                          className="transition-all delay-300"
+                        <Link
+                          href={stack.url}
+                          title={stack.name}
                         >
-                          <Link href={stack.url}>
-                            <Components
-                              className={cn(
-                                "h-8 w-8 transition-all duration-300 hover:scale-125",
-                              )}
-                            />
-                          </Link>
-                        </Tooltip>
+                          <Icons className="h-8 w-8 transition-all duration-300 hover:scale-125" />
+                        </Link>
                       </li>
                     );
                   })}
