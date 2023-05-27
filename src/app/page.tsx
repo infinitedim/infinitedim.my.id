@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Metadata } from "next";
 import Image from "next/image";
-import { Heading, Paragraph } from "@/components/atoms";
+import { Heading, Paragraph } from "@/components";
 import { cn } from "@/utils";
 import Sapiens from "@/public/assets/svg/hero.svg";
 import "@total-typescript/ts-reset";
@@ -23,17 +23,15 @@ export const metadata: Metadata = {
     "cv dimas saputra",
     "infinitedim cv",
     "cv infinitedim",
+    "resume",
     "resume infinitedim",
     "infinitedim",
     "infinitedim portfolio",
     "portfolio infinitedim",
     "Dimas portfolio",
-    "devixid",
-    "devix",
-    "devixid member",
-    "devix member",
-    "member devix",
-    "member devixid",
+    "junior frontend",
+    "i am dimas saputra",
+    "saputradimas",
   ],
   authors: [{ name: "infinitedim", url: "https://infinitedim.vercel.app" }],
   creator: "infinitedim",
@@ -62,12 +60,18 @@ export default function Page() {
         </Heading>
       </div>
       <div className="md:container mt-4 max-w-5xl">
-        <Heading className="text-4xl lg:text-6xl md:text-5xl text-mood-gray mb-5 font-black">
+        <Heading
+          className="text-4xl lg:text-6xl md:text-5xl text-mood-gray mb-5 font-black"
+          title="This is my portfolio"
+        >
           This is my portfolio
         </Heading>
-        <Paragraph className="text-xl md:text-2xl lg:text-3xl sm:line-clamp-4 text-mood-gray font-medium tracking-tighter">
-          Well hello people, my name is Dimas Saputra, i am a junior frontend
-          developer especially React. based in Bekasi, Indonesia
+        <Paragraph
+          className="text-xl md:text-2xl lg:text-3xl sm:line-clamp-4 text-mood-gray font-medium tracking-tighter"
+          title="Well hello people, my name is dimas saputra, i am a junior frontend developer especially react. I live in bekasi, indonesia"
+        >
+          Well hello people, my name is dimas saputra, i am a junior frontend
+          developer especially react. I live in bekasi, indonesia
         </Paragraph>
       </div>
       <div

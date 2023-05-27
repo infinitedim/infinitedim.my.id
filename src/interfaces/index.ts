@@ -26,16 +26,24 @@ export interface ParagraphProps extends HTMLMotionProps<"p"> {
   className?: string;
 }
 
-export interface BreakpointType {
-  name: string;
-  min: number;
-  max: number;
+export interface ProjectCardProps extends HTMLMotionProps<"div"> {
+  projectTitle: string;
+  projectDesc: string;
+  projectUrl: string;
+  projectRepo: string;
 }
+
+export interface ProgressBarProps extends HTMLMotionProps<"div"> {}
 
 export interface TechStackProjects {
   name: string;
   url: string;
   icon: NamedExoticComponent<AnimationableSVGProps>;
+}
+
+export interface MenuItemType {
+  anchor: string;
+  name: string;
 }
 
 export interface ProjectsType {
@@ -44,9 +52,4 @@ export interface ProjectsType {
   url: string;
   repo: string;
   techStack: TechStackProjects[];
-}
-
-export interface menuItemType {
-  anchor: string;
-  name: string;
 }

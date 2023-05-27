@@ -3,6 +3,7 @@
 @tailwind utilities;
 @tailwind variants;
 
+@import "./jelly-maker.css";
 /* card styling */
 .grid-card {
   display: grid;
@@ -20,6 +21,9 @@
 
 .map {
   filter: grayscale(1) contrast(1.2) opacity(0.5);
+}
+.nav-menu-border {
+  border-bottom: 1px solid rgba(15, 23, 42, 0.5);
 }
 /* custom scrollbar */
 
