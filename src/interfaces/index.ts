@@ -3,9 +3,7 @@ import type { HTMLMotionProps, SVGMotionProps, Variants } from "framer-motion";
 import "@total-typescript/ts-reset";
 
 export interface AnimationableSVGProps extends SVGMotionProps<SVGSVGElement> {
-  animate?: string;
   className?: string;
-  initial?: string | boolean;
   pathVariants?: Variants | undefined;
   svgVariants?: Variants | undefined;
 }
@@ -26,10 +24,17 @@ export interface ParagraphProps extends HTMLMotionProps<"p"> {
   className?: string;
 }
 
-export interface BreakpointType {
-  name: string;
-  min: number;
-  max: number;
+export interface ProjectCardProps extends HTMLMotionProps<"div"> {
+  projectTitle: string;
+  projectDesc: string;
+  projectUrl: string;
+  projectRepo: string;
+}
+
+export interface ProgressBarProps extends HTMLMotionProps<"div"> {}
+
+export interface DivProps extends HTMLMotionProps<"div"> {
+  children: ReactNode;
 }
 
 export interface TechStackProjects {
@@ -38,15 +43,15 @@ export interface TechStackProjects {
   icon: NamedExoticComponent<AnimationableSVGProps>;
 }
 
+export interface MenuItemType {
+  anchor: string;
+  name: string;
+}
+
 export interface ProjectsType {
   title: string;
   description: string;
   url: string;
   repo: string;
   techStack: TechStackProjects[];
-}
-
-export interface menuItemType {
-  anchor: string;
-  name: string;
 }

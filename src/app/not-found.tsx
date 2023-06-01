@@ -1,4 +1,4 @@
-import { Heading } from "@/components/atoms";
+import { Heading } from "@/components";
 import "@total-typescript/ts-reset";
 
 export default function NotFound() {

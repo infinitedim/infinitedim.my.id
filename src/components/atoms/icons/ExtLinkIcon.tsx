@@ -7,9 +7,7 @@ import { cn } from "@/utils";
 import "@total-typescript/ts-reset";
 
 export const ExtLinkIcon = ({
-  animate,
   className = "h-6 w-6",
-  initial,
   pathVariants,
   svgVariants,
   ...props
@@ -19,9 +17,7 @@ export const ExtLinkIcon = ({
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill="none"
-      animate={animate}
       className={cn(className)}
-      initial={initial}
       variants={svgVariants}
       {...props}
     >

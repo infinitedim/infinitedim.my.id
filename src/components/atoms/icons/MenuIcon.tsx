@@ -7,9 +7,7 @@ import { cn } from "@/utils";
 import "@total-typescript/ts-reset";
 
 const MenuIcon = ({
-  animate,
   className = "h-6 w-6",
-  initial,
   pathVariants,
   svgVariants,
   ...props
@@ -21,9 +19,7 @@ const MenuIcon = ({
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      animate={animate}
       className={cn(className)}
-      initial={initial}
       variants={svgVariants}
       {...props}
     >

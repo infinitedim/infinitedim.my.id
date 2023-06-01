@@ -3,12 +3,7 @@
 @tailwind utilities;
 @tailwind variants;
 
-/* card styling */
-.grid-card {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-template-rows: repeat(2, minmax(0, 1fr));
-}
+@import "./jelly-maker.css";
 
 .y-full {
   transform: translateY(-150%);
@@ -21,6 +16,7 @@
 .map {
   filter: grayscale(1) contrast(1.2) opacity(0.5);
 }
+
 /* custom scrollbar */
 
 /* width */
@@ -43,3 +39,5 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #171717;
 }
+
+/* end custom scrollbar */

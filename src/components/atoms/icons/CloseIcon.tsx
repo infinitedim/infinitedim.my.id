@@ -1,11 +1,13 @@
+"use client";
+
 import { memo } from "react";
 import { motion } from "framer-motion";
 import type { AnimationableSVGProps } from "@/interfaces";
+import { cn } from "@/utils";
+import "@total-typescript/ts-reset";
 
 export const CloseIcon = ({
-  animate,
   className = "w-6 h-6",
-  initial,
   pathVariants,
   svgVariants,
   ...props
@@ -17,9 +19,7 @@ export const CloseIcon = ({
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      animate={animate}
-      className={className}
-      initial={initial}
+      className={cn(className)}
       variants={svgVariants}
       {...props}
     >

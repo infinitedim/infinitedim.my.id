@@ -2,13 +2,12 @@
 
 import { memo } from "react";
 import { motion } from "framer-motion";
-import "@total-typescript/ts-reset";
 import type { AnimationableSVGProps } from "@/interfaces";
+import { cn } from "@/utils";
+import "@total-typescript/ts-reset";
 
 export const CommandIcon = ({
-  animate,
   className = "h-6 w-6",
-  initial,
   pathVariants,
   svgVariants,
   ...props
@@ -16,11 +15,9 @@ export const CommandIcon = ({
   return (
     <motion.svg
       xmlns="http://www.w3.org/2000/svg"
-      className={className}
       viewBox="0 0 24 24"
+      className={cn(className)}
       variants={svgVariants}
-      animate={animate}
-      initial={initial}
       {...props}
     >
       <motion.path

@@ -7,9 +7,7 @@ import { cn } from "@/utils";
 import "@total-typescript/ts-reset";
 
 export const ReactIcon = ({
-  animate,
   className = "h-6 w-6",
-  initial,
   pathVariants,
   svgVariants,
   ...props
@@ -18,9 +16,7 @@ export const ReactIcon = ({
     <motion.svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
-      animate={animate}
       className={cn(className)}
-      initial={initial}
       {...props}
     >
       <motion.circle
