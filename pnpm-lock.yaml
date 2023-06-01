@@ -25,7 +25,6 @@ dependencies:
   tailwind-merge:
     specifier: ^1.12.0
     version: 1.12.0
-
 devDependencies:
   '@jridgewell/sourcemap-codec':
     specifier: ^1.4.15
@@ -524,7 +523,6 @@ packages:
       picocolors: 1.0.0
       tslib: 2.5.0
     dev: true
-
   /@rollup/plugin-terser@0.4.3:
     resolution: {integrity: sha512-EF0oejTMtkyhrkwCdg0HJ0IpkcaVg1MMSf2olHb2Jp+1mnLM04OhjpJWGma4HobiDTF0WCyViWuvadyE9ch2XA==}
     engines: {node: '>=14.0.0'}
@@ -3916,7 +3914,7 @@ packages:
       react: 18.2.0
       scheduler: 0.23.0
     dev: false
-
+    
   /react-intersection-observer@9.4.3(react@18.2.0):
     resolution: {integrity: sha512-WNRqMQvKpupr6MzecAQI0Pj0+JQong307knLP4g/nBex7kYfIaZsPpXaIhKHR+oV8z+goUbH9e10j6lGRnTzlQ==}
     peerDependencies:
@@ -3924,7 +3922,7 @@ packages:
     dependencies:
       react: 18.2.0
     dev: false
-
+    
   /react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: true
