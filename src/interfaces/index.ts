@@ -37,8 +37,6 @@ export interface DivProps extends HTMLMotionProps<"div"> {
   children: ReactNode;
 }
 
-export interface ProgressBarProps extends HTMLMotionProps<"div"> {}
-
 export interface TechStackProjects {
   name: string;
   url: string;
