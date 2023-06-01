@@ -11,7 +11,6 @@ import type { MenuItemType } from "@/interfaces";
 import { cn } from "@/utils";
 import Infinite from "@/public/assets/svg/logo.svg";
 import "@total-typescript/ts-reset";
-import Infinite from "@/public/assets/svg/logo.svg";
   
 function Navbar() {
   const [navOpen, setNavOpen] = useState<boolean>(false);
