@@ -37,15 +37,15 @@ export interface DivProps extends HTMLMotionProps<"div"> {
   children: ReactNode;
 }
 
+export interface MenuItemType {
+  anchor: string;
+  name: string;
+}
+
 export interface TechStackProjects {
   name: string;
   url: string;
   icon: NamedExoticComponent<AnimationableSVGProps>;
-}
-
-export interface MenuItemType {
-  anchor: string;
-  name: string;
 }
 
 export interface ProjectsType {

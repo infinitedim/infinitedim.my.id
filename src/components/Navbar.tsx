@@ -31,8 +31,8 @@ function Navbar() {
             >
               <motion.div
                 animate={{ x: 0, opacity: 1 }}
-                initial={{ x: "-100vw", opacity: 0 }}
-                transition={{ duration: 1.5, type: "spring", stiffness: 50 }}
+                initial={{ x: -50, opacity: 0 }}
+                transition={{ duration: 1 }}
               >
                 <Image
                   src={Infinite as any}
@@ -42,8 +42,8 @@ function Navbar() {
               <Heading
                 className="text-2xl lg:text-3xl trakcing-tighter font-bold"
                 animate={{ y: 0, opacity: 1 }}
-                initial={{ y: "-100vh", opacity: 0 }}
-                transition={{ duration: 1.5, type: "spring", stiffness: 50 }}
+                initial={{ y: -30, opacity: 0 }}
+                transition={{ duration: 1 }}
               >
                 Dimas Saputra
               </Heading>
