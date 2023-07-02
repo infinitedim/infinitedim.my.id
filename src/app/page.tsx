@@ -48,20 +48,20 @@ export default function Page() {
         )}
         animate={{ x: 0, opacity: 1 }}
         initial={{ x: "-100vw", opacity: 0 }}
-        transition={{ duration: 1, type: "tween" }}
+        transition={{ duration: 1, type: "spring", stiffness: 50 }}
       >
         <Image
           alt="Hero"
-          className={cn("mt-10 h-3/4 w-3/4")}
+          className={cn("mb-10 mt-20 h-3/4 w-3/4")}
           src={Sapiens}
           priority
         />
-        <Div className="w-full h-full">
+        <Div className="">
           <Heading
-            className="text-4xl md:text-5xl text-mood-gray mb-5 font-black"
+            className="text-4xl md:text-5xl text-mood-gray mb-0 lg:mb-5 font-black"
             initial={{ opacity: 0, y: -100, rotate: -10 }}
-            whileInView={{ opacity: 1, y: 0, rotate: 0 }}
-            transition={{ delay: 0.5, duration: 0.5, type: "spring" }}
+            animate={{ opacity: 1, y: 0, rotate: 0 }}
+            transition={{ delay: 1, duration: 0.5, type: "spring" }}
             viewport={{ once: true, amount: 1 }}
           >
             This is my portfolio
@@ -69,8 +69,8 @@ export default function Page() {
           <Paragraph
             className="text-xl md:text-2xl lg:text-3xl sm:line-clamp-4 text-mood-gray font-medium tracking-tighter"
             initial={{ opacity: 0, y: 50, rotate: 10 }}
-            whileInView={{ opacity: 1, y: 0, rotate: 0 }}
-            transition={{ delay: 0.5, duration: 0.5, type: "spring" }}
+            animate={{ opacity: 1, y: 0, rotate: 0 }}
+            transition={{ delay: 1, duration: 0.5, type: "spring" }}
             viewport={{ once: true, amount: 1 }}
           >
             Well hello people, my name is Dimas Saputra, i am a junior frontend
@@ -84,7 +84,7 @@ export default function Page() {
               whileInView={{ x: 0, opacity: 1 }}
               viewport={{ once: true, amount: 1 }}
               transition={{
-                delay: 0.5,
+                delay: 1,
                 type: "spring",
                 stiffness: 80,
                 duration: 1,
@@ -104,7 +104,7 @@ export default function Page() {
               whileInView={{ x: 0, opacity: 1 }}
               viewport={{ once: true, amount: 1 }}
               transition={{
-                delay: 0.5,
+                delay: 1,
                 type: "spring",
                 stiffness: 80,
                 duration: 1,
