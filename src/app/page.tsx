@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Metadata } from "next";
 import Image from "next/image";
-import { Div, Heading, Paragraph } from "@/components";
+import { Heading, Paragraph } from "@/components/atoms";
 import { cn } from "@/utils";
 import Sapiens from "@/public/assets/svg/hero.svg";
 import "@total-typescript/ts-reset";
@@ -27,101 +27,92 @@ export const metadata: Metadata = {
     "infinitedim",
     "infinitedim portfolio",
     "portfolio infinitedim",
-    "dimas portfolio",
+    "Dimas portfolio",
+    "devixid",
+    "devix",
+    "devixid member",
+    "devix member",
+    "member devix",
+    "member devixid",
   ],
   authors: [{ name: "infinitedim", url: "https://infinitedim.vercel.app" }],
+  colorScheme: "light",
+  publisher: "vercel",
+  openGraph: {
+    type: "website",
+    url: "https://infinitedim.vercel.app",
+    title: "Dimas Saputra - Home",
+    description: "My Portfolio website",
+    siteName: "My Website",
+    images: [
+      {
+        url: "https://infinitedim.vercel.app/opengraph.png",
+      },
+    ],
+  },
   creator: "infinitedim",
   viewport: { width: "device-width", initialScale: 1 },
 };
 
-export default function Page() {
+/**
+ * @description this function is create home page components
+ * @returns {ReactNode}
+ * @type {JSX.Element}
+ */
+export default function page() {
   return (
-    <section
-      id="hero-section"
-      className={cn(
-        "container m-auto grid h-[100vh_-_64px] max-w-5xl place-items-center",
-      )}
-    >
-      <Div
+    <div className={cn("container mb-10 max-w-5xl")}>
+      <div
         className={cn(
-          "mb-5 flex h-full flex-col items-center justify-center md:mb-20 md:flex-row md:px-10 lg:mt-20",
+          "mb-5 flex items-center justify-center md:mb-20 md:px-10",
         )}
-        animate={{ x: 0, opacity: 1 }}
-        initial={{ x: "-100vw", opacity: 0 }}
-        transition={{ duration: 1, type: "spring", stiffness: 50 }}
       >
         <Image
-          alt="Hero"
-          className={cn("mb-10 mt-20 h-3/4 w-3/4")}
           src={Sapiens}
+          quality={100}
+          className={cn("mt-10 md:h-3/4 md:w-3/4")}
+          alt="Hero"
           priority
         />
-        <Div className="">
-          <Heading
-            className="text-4xl md:text-5xl text-mood-gray mb-0 lg:mb-5 font-black"
-            initial={{ opacity: 0, y: -100, rotate: -10 }}
-            animate={{ opacity: 1, y: 0, rotate: 0 }}
-            transition={{ delay: 1, duration: 0.5, type: "spring" }}
-            viewport={{ once: true, amount: 1 }}
-          >
-            This is my portfolio
-          </Heading>
-          <Paragraph
-            className="text-xl md:text-2xl lg:text-3xl sm:line-clamp-4 text-mood-gray font-medium tracking-tighter"
-            initial={{ opacity: 0, y: 50, rotate: 10 }}
-            animate={{ opacity: 1, y: 0, rotate: 0 }}
-            transition={{ delay: 1, duration: 0.5, type: "spring" }}
-            viewport={{ once: true, amount: 1 }}
-          >
-            Well hello people, my name is Dimas Saputra, i am a junior frontend
-            developer especially React. based in Bekasi, Indonesia
-          </Paragraph>
-          <Div
-            className={cn("mb-10 mt-7 flex items-center justify-start gap-x-5")}
-          >
-            <Div
-              initial={{ x: -20, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              viewport={{ once: true, amount: 1 }}
-              transition={{
-                delay: 1,
-                type: "spring",
-                stiffness: 80,
-                duration: 1,
-              }}
-            >
-              <Link
-                href="/assets/pdf/resume.pdf"
-                className="bg-mood-gray text-custom-white-900 hover:bg-custom-black-900 rounded-[10px] px-8 py-4 font-medium transition-all duration-[250ms]"
-                title="Resume"
-              >
-                Resume
-              </Link>
-              <span className="sr-only">Resume</span>
-            </Div>
-            <Div
-              initial={{ x: 50, opacity: 0 }}
-              whileInView={{ x: 0, opacity: 1 }}
-              viewport={{ once: true, amount: 1 }}
-              transition={{
-                delay: 1,
-                type: "spring",
-                stiffness: 80,
-                duration: 1,
-              }}
-            >
-              <Link
-                href="https://github.com/infinitedim"
-                className="border-mood-gray text-mood-gray hover:bg-mood-gray hover:text-custom-white-900 rounded-[10px] border-[1px] px-8 py-4 font-medium transition-all duration-[250ms]"
-                title="Github"
-              >
-                Github
-              </Link>
-              <span className="sr-only">Github</span>
-            </Div>
-          </Div>
-        </Div>
-      </Div>
-    </section>
+        <Heading
+          as="h1"
+          className="line-clamp-3 md:text-5xl md:line-clamp-2 lg:text-7xl text-4xl text-mood-gray font-black"
+        >
+          What&#8216;s going on here?
+        </Heading>
+      </div>
+      <div className={cn("mx-2 mt-4 md:container md:max-w-5xl")}>
+        <Heading
+          className="text-4xl lg:text-6xl md:text-5xl text-mood-gray mb-5 font-black"
+          as="h1"
+        >
+          This is my portfolio
+        </Heading>
+        <Paragraph className="lg:p-2 lg:mt-2 text-xl md:text-3xl sm:line-clamp-4 text-mood-gray font-medium tracking-tighter">
+          I am a junior front end web developer especially react.js based in
+          bekasi indonesia. i am a fresh graduate from vocational high school
+          and now i&#8216;m working as a software engineer at voltras
+          international
+        </Paragraph>
+      </div>
+      <div
+        className={cn(
+          "mx-2 mt-7 flex items-center justify-start gap-x-5 md:container md:max-w-5xl",
+        )}
+      >
+        <Link
+          href="/assets/pdf/resume.pdf"
+          className="bg-mood-gray text-woodsmoke-50 hover:bg-custom-black-900 rounded-[10px] px-10 py-5 font-medium transition-all duration-[250ms]"
+        >
+          Resume
+        </Link>
+        <Link
+          href="https://github.com/infinitedim"
+          className="border-mood-gray text-woodsmoke-900 hover:bg-mood-gray hover:text-woodsmoke-50 rounded-[10px] border-2 px-10 py-5 font-medium transition-all duration-[250ms]"
+        >
+          Github
+        </Link>
+      </div>
+    </div>
   );
 }

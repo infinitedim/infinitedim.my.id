@@ -1,7 +1,7 @@
 import localFont from "next/font/local";
 import type { ReactNode } from "react";
 import { Analytics } from "@vercel/analytics/react";
-import { Navbar, ProgressBar } from "@/components";
+import { Header } from "@/components";
 import { cn } from "@/utils";
 import "@total-typescript/ts-reset";
 import "@/styles/globals.css";
@@ -72,7 +72,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     >
       <body
         className={cn(
-          "relative mx-auto max-w-7xl overflow-x-hidden bg-custom-white-900 text-mood-gray antialiased",
+          "bg-custom-white-900 relative mx-auto max-w-7xl overflow-x-hidden text-mood-gray antialiased",
         )}
       >
         <a
@@ -81,8 +81,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         >
           Skip To Content
         </a>
-        <ProgressBar />
-        <Navbar />
+        <Header />
         <main
           className="antialiased focus:outline-none mt-10"
           id="main-content"
