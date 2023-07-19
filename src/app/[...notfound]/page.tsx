@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     "404 not found",
     "404 page",
   ],
-  authors: [{ name: "infinitedim", url: "https://infinitedim.vercel.app" }],
+  authors: [{ name: "infinitedim", url: "https://infinitedim.site" }],
   creator: "infinitedim",
   viewport: { width: "device-width", initialScale: 1 },
 };

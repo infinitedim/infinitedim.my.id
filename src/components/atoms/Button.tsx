@@ -1,27 +1,20 @@
 "use client";
 
-import { ButtonProps } from "@/interfaces";
 import { cn } from "@/utils";
-import { memo } from "react";
 import { motion } from "framer-motion";
-import "@total-typescript/ts-reset";
+import { memo } from "react";
+import { ButtonProps } from "@/interfaces";
 
-export const Button = ({
-  children,
-  className,
-  type = "button",
-  ...props
-}: ButtonProps) => {
+function Button({ children, className, type, ...props }: ButtonProps) {
   return (
     <motion.button
-      type={type}
-      className={cn(className)}
       {...props}
+      className={cn(className)}
+      type={type !== undefined ? type : "button"}
     >
       {children}
     </motion.button>
   );
-};
-Button.displayName = "Button";
+}
 
 export default memo(Button);
