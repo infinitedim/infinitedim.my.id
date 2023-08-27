@@ -1,6 +1,6 @@
 export default function Loading() {
   return (
-    <div className="m-auto flex items-center justify-center w-full h-[90vh]">
+    <div className="m-auto flex items-center justify-center w-full h-[70vh]">
       <div className="jelly-triangle">
         <div className="jelly-triangle__dot" />
         <div className="jelly-triangle__traveler" />

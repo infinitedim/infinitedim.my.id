@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { Metadata } from "next";
 import Image from "next/image";
-import { Heading, Paragraph } from "@/components/atoms";
-import { cn } from "@/utils";
+import { Div, Heading, Paragraph } from "@/components/atoms";
 import Sapiens from "@/public/assets/svg/hero.svg";
 import "@total-typescript/ts-reset";
 
@@ -61,16 +60,12 @@ export const metadata: Metadata = {
  */
 export default function page() {
   return (
-    <div className={cn("container mb-10 max-w-5xl")}>
-      <div
-        className={cn(
-          "mb-5 flex items-center justify-center md:mb-20 md:px-10",
-        )}
-      >
+    <Div className="container mb-10 max-w-5xl">
+      <Div className="mb-5 flex items-center justify-center md:mb-20">
         <Image
           src={Sapiens}
           quality={100}
-          className={cn("mt-10 md:h-3/4 md:w-3/4")}
+          className="mt-10 md:h-3/4 md:w-3/4"
           alt="Hero"
           priority
         />
@@ -80,8 +75,8 @@ export default function page() {
         >
           What&#8216;s going on here?
         </Heading>
-      </div>
-      <div className={cn("mx-2 mt-4 md:container md:max-w-5xl")}>
+      </Div>
+      <Div className="mx-2 mt-4 md:container md:max-w-5xl">
         <Heading
           className="text-4xl lg:text-6xl md:text-5xl text-mood-gray mb-5 font-black"
           as="h1"
@@ -94,25 +89,21 @@ export default function page() {
           and now i&#8216;m working as a software engineer at voltras
           international
         </Paragraph>
-      </div>
-      <div
-        className={cn(
-          "mx-2 mt-7 flex items-center justify-start gap-x-5 md:container md:max-w-5xl",
-        )}
-      >
+      </Div>
+      <Div className="mx-2 mt-7 flex items-center justify-start gap-x-5 md:container md:max-w-5xl">
         <Link
           href="/assets/pdf/resume.pdf"
-          className="bg-mood-gray text-woodsmoke-50 hover:bg-custom-black-900 rounded-[10px] px-10 py-5 font-medium transition-all duration-[250ms]"
+          className="bg-mood-gray hover:bg-woodsmoke-950 text-woodsmoke-50 hover:bg-custom-black-900 rounded-[10px] px-6 py-3 font-medium transition-all duration-[250ms]"
         >
           Resume
         </Link>
         <Link
           href="https://github.com/infinitedim"
-          className="border-mood-gray text-woodsmoke-900 hover:bg-mood-gray hover:text-woodsmoke-50 rounded-[10px] border-2 px-10 py-5 font-medium transition-all duration-[250ms]"
+          className="border-mood-gray text-woodsmoke-900 hover:bg-mood-gray hover:text-woodsmoke-50 rounded-[10px] border-2 px-6 py-3 font-medium transition-all duration-[250ms]"
         >
           Github
         </Link>
-      </div>
-    </div>
+      </Div>
+    </Div>
   );
 }

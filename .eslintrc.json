@@ -34,7 +34,6 @@
     "prettier",
     "promise",
     "react",
-    "react-hooks",
     "tailwindcss",
     "jsdoc"
   ],
