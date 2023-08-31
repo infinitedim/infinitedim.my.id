@@ -1,77 +1,77 @@
 /* eslint-disable global-require */
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: ["class"],
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
-    "./node_modules/flowbite-react/**/*.js",
-    "./pages/**/*.{js,jsx,ts,tsx}",
-    "./public/**/*.html",
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
   ],
   theme: {
     container: {
       center: true,
-      padding: "1.5rem",
+      padding: "2rem",
       screens: {
-        "2xl": "1360px",
+        "2xl": "1400px",
       },
     },
-    screens: {
-      sm: "576px",
-      // => @media (min-width: 576px) { ... }
-      md: "768px",
-      // => @media (min-width: 768px) { ... }
-      lg: "1024px",
-      // => @media (min-width: 1024px) { ... }
-      xl: "1200px",
-      // => @media (min-width: 1200px) { ... }
-      "2xl": "1400px",
-      // => @media (min-width: 1400px) { ... }
-    },
     extend: {
-      colors: ({ colors }) => ({
-        inherit: colors.inherit,
-        current: colors.current,
-        transparent: colors.transparent,
-        black: colors.black,
-        white: colors.white,
-        slate: colors.slate,
-        gray: colors.gray,
-        zinc: colors.zinc,
-        neutral: colors.neutral,
-        stone: colors.stone,
-        red: colors.red,
-        orange: colors.orange,
-        amber: colors.amber,
-        yellow: colors.yellow,
-        lime: colors.lime,
-        green: colors.green,
-        emerald: colors.emerald,
-        teal: colors.teal,
-        cyan: colors.cyan,
-        sky: colors.sky,
-        blue: colors.blue,
-        indigo: colors.indigo,
-        violet: colors.violet,
-        purple: colors.purple,
-        fuchsia: colors.fuchsia,
-        pink: colors.pink,
-        rose: colors.rose,
-        "mood-gray": "#0F172A",
-        woodsmoke: {
-          50: "#f6f6f7",
-          100: "#e1e2e6",
-          200: "#c2c4cd",
-          300: "#9c9eac",
-          400: "#77798a",
-          500: "#5c5e70",
-          600: "#484a59",
-          700: "#3c3d49",
-          800: "#33343c",
-          900: "#2d2d34",
-          950: "#09090b",
+      colors: {
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
         },
-      }),
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        destructive: {
+          DEFAULT: "hsl(var(--destructive))",
+          foreground: "hsl(var(--destructive-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        popover: {
+          DEFAULT: "hsl(var(--popover))",
+          foreground: "hsl(var(--popover-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
+        },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      keyframes: {
+        "accordion-down": {
+          from: { height: 0 },
+          to: { height: "var(--radix-accordion-content-height)" },
+        },
+        "accordion-up": {
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: 0 },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
+      },
     },
   },
-  plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],
+  plugins: [require("tailwindcss-animate")],
 };

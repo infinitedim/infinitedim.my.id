@@ -12,19 +12,24 @@ export default function Navbar() {
           <Link href="/">Dimas</Link>
         </Heading>
       </div>
-      <ul className="flex w-2/5 items-center justify-around cursor-not-allowed">
-        <li>
-          <Link href="/">About</Link>
-        </li>
-        <li>
+      <ul className="flex w-2/5 items-center justify-around">
+        <li className="cursor-not-allowed">
           <Link
             href="/"
-            className="border px-4 py-1 rounded-lg border-woodsmoke-950 cursor-not-allowed"
+            className="cursor-not-allowed"
+          >
+            About
+          </Link>
+        </li>
+        <li className="cursor-not-allowed">
+          <Link
+            href="/"
+            className="border px-4 py-1 rounded-lg border-primary cursor-not-allowed"
           >
             Blog
           </Link>
         </li>
-        <li>
+        <li className="cursor-not-allowed">
           <Link
             href="/"
             className="cursor-not-allowed"
@@ -33,10 +38,20 @@ export default function Navbar() {
           </Link>
         </li>
         <li className="cursor-not-allowed">
-          <Link href="/">Project</Link>
+          <Link
+            href="/"
+            className="cursor-not-allowed"
+          >
+            Project
+          </Link>
         </li>
         <li className="cursor-not-allowed">
-          <Link href="/">Contact</Link>
+          <Link
+            href="/"
+            className="cursor-not-allowed"
+          >
+            Contact
+          </Link>
         </li>
       </ul>
     </nav>

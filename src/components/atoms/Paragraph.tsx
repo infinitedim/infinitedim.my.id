@@ -2,17 +2,16 @@
 
 import { ParagraphProps } from "@/interfaces";
 import { cn } from "@/utils";
-import { motion } from "framer-motion";
 import { memo } from "react";
 
 function Paragraph({ children, className, ...props }: ParagraphProps) {
   return (
-    <motion.p
+    <p
       {...props}
-      className={cn(className)}
+      className={cn(className, "leading-7 [&:not(:first-child)]:mt-6")}
     >
       {children}
-    </motion.p>
+    </p>
   );
 }
 

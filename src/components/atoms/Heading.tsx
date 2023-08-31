@@ -4,59 +4,59 @@
 
 import { HeadingProps } from "@/interfaces";
 import { memo } from "react";
-import { motion } from "framer-motion";
 import { cn } from "@/utils";
 
 function Heading({ as, children, className, ...props }: HeadingProps) {
   return as === "h1" ? (
-    <motion.h1
+    <h1
       {...props}
-      className={cn(className)}
+      className={cn(
+        className,
+        "scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl",
+      )}
     >
       {children}
-    </motion.h1>
+    </h1>
   ) : as === "h2" ? (
-    <motion.h2
+    <h2
       {...props}
-      className={cn(className)}
+      className={cn(
+        className,
+        "scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0",
+      )}
     >
       {children}
-    </motion.h2>
+    </h2>
   ) : as === "h3" ? (
-    <motion.h3
+    <h3
       {...props}
-      className={cn(className)}
+      className={cn(
+        className,
+        "scroll-m-20 text-2xl font-semibold tracking-tight",
+      )}
     >
       {children}
-    </motion.h3>
+    </h3>
   ) : as === "h4" ? (
-    <motion.h4
+    <h4
       {...props}
-      className={cn(className)}
+      className={cn(
+        className,
+        "scroll-m-20 text-xl font-semibold tracking-tight",
+      )}
     >
       {children}
-    </motion.h4>
-  ) : as === "h5" ? (
-    <motion.h5
-      {...props}
-      className={cn(className)}
-    >
-      {children}
-    </motion.h5>
-  ) : as === "h6" ? (
-    <motion.h6
-      {...props}
-      className={cn(className)}
-    >
-      {children}
-    </motion.h6>
+    </h4>
   ) : (
-    <motion.h1
+    <h1
       {...props}
-      className={cn(className)}
+      className={cn(
+        className,
+        "scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl",
+      )}
     >
       {children}
-    </motion.h1>
+    </h1>
   );
 }
 
