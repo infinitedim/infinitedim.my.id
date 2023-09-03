@@ -1,8 +1,9 @@
-import { Div, Heading, Paragraph } from "@/components";
+import { Heading, Paragraph } from "@/components";
+import "@total-typescript/ts-reset";
 
 export default function Page() {
   return (
-    <Div>
+    <div>
       <Heading
         as="h1"
         className="text-3xl mb-5 font-bold tracking-tight"
@@ -18,8 +19,8 @@ export default function Page() {
         doloribus
       </Paragraph>
 
-      <Div>
-        <Div className="mt-5 bg-red rounded-lg">
+      <div>
+        <div className="mt-5 bg-red rounded-lg">
           <Heading as="h1">Miolica</Heading>
           <Paragraph>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
@@ -35,8 +36,8 @@ export default function Page() {
             temporibus numquam similique tenetur, necessitatibus atque deleniti.
             Labore deserunt, iure veniam doloremque aut natus!
           </Paragraph>
-        </Div>
-      </Div>
-    </Div>
+        </div>
+      </div>
+    </div>
   );
 }

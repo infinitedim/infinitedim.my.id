@@ -6,6 +6,6 @@
   "jsxSingleQuote": false,
   "singleAttributePerLine": true,
   "endOfLine": "auto",
-  "editorConfig": false,
+  "editorConfig": true,
   "trailingComma": "all"
 }

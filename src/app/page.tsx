@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Metadata } from "next";
 import Image from "next/image";
-import { Div, Heading, Paragraph } from "@/components/atoms";
+import { Heading, Paragraph } from "@/components/atoms";
 import Sapiens from "@/public/assets/svg/hero.svg";
 import "@total-typescript/ts-reset";
 
@@ -58,25 +58,25 @@ export const metadata: Metadata = {
  * @returns {ReactNode}
  * @type {JSX.Element}
  */
-export default function page() {
+export default function Page() {
   return (
-    <Div className="container mb-10 max-w-5xl">
-      <Div className="mb-5 flex items-center justify-center md:mb-20">
+    <div className="container mb-10 max-w-5xl">
+      <div className="mb-5 flex items-center justify-center md:mb-20">
         <Image
           src={Sapiens}
           quality={100}
-          className="mt-10 md:h-3/4 md:w-3/4"
+          className="mt-10 md:h-2/5 md:w-2/5"
           alt="Hero"
           priority
         />
         <Heading
           as="h1"
-          className="line-clamp-3 md:text-5xl md:line-clamp-2 lg:text-7xl text-4xl text-mood-gray font-black"
+          className="text-7xl text-primary font-black"
         >
           What&#8216;s going on here?
         </Heading>
-      </Div>
-      <Div className="mx-2 mt-4 md:container md:max-w-5xl">
+      </div>
+      <div className="mx-2 mt-4 md:container md:max-w-5xl">
         <Heading
           className="text-4xl lg:text-6xl md:text-5xl text-mood-gray mb-5 font-black"
           as="h1"
@@ -86,24 +86,22 @@ export default function page() {
         <Paragraph className="lg:p-2 lg:mt-2 text-xl md:text-3xl sm:line-clamp-4 text-mood-gray font-medium tracking-tighter">
           I am a junior front end web developer especially react.js based in
           bekasi indonesia. i am a fresh graduate from vocational high school
-          and now i&#8216;m working as a software engineer at voltras
-          international
         </Paragraph>
-      </Div>
-      <Div className="mx-2 mt-7 flex items-center justify-start gap-x-5 md:container md:max-w-5xl">
+      </div>
+      <div className="mx-2 mt-7 flex items-center justify-start gap-x-5 md:container md:max-w-5xl">
         <Link
           href="/assets/pdf/resume.pdf"
-          className="bg-mood-gray hover:bg-woodsmoke-950 text-woodsmoke-50 hover:bg-custom-black-900 rounded-[10px] px-6 py-3 font-medium transition-all duration-[250ms]"
+          className="bg-primary text-secondary hover:bg-primary/90 rounded-[10px] px-6 py-3 font-medium transition-all duration-[250ms]"
         >
           Resume
         </Link>
         <Link
           href="https://github.com/infinitedim"
-          className="border-mood-gray text-woodsmoke-900 hover:bg-mood-gray hover:text-woodsmoke-50 rounded-[10px] border-2 px-6 py-3 font-medium transition-all duration-[250ms]"
+          className="border-primary text-primary hover:bg-primary hover:text-secondary rounded-[10px] border-2 px-6 py-3 font-medium transition-all duration-[250ms]"
         >
           Github
         </Link>
-      </Div>
-    </Div>
+      </div>
+    </div>
   );
 }

@@ -1,61 +1,15 @@
-import localFont from "next/font/local";
-import type { ReactNode } from "react";
+import { NextFont } from "next/dist/compiled/@next/font";
+import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
-import { Header } from "@/components";
+import { Navbar } from "@/components";
 import { cn } from "@/utils";
-import "@total-typescript/ts-reset";
+import type { ReactNode } from "react";
 import "@/styles/globals.css";
+import "@total-typescript/ts-reset";
 
-const SFPro = localFont({
+const inter: NextFont = Inter({
+  subsets: ["latin"],
   display: "swap",
-  preload: true,
-  src: [
-    {
-      path: "../../public/assets/fonts/SF-Pro-Display-Thin.ttf",
-      weight: "100",
-      style: "normal",
-    },
-    {
-      path: "../../public/assets/fonts/SF-Pro-Display-Ultralight.ttf",
-      weight: "200",
-      style: "normal",
-    },
-    {
-      path: "../../public/assets/fonts/SF-Pro-Display-Light.ttf",
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "../../public/assets/fonts/SF-Pro-Display-Regular.ttf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../public/assets/fonts/SF-Pro-Display-Medium.ttf",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../../public/assets/fonts/SF-Pro-Display-Semibold.ttf",
-      weight: "600",
-      style: "normal",
-    },
-    {
-      path: "../../public/assets/fonts/SF-Pro-Display-Bold.ttf",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "/../../public/assets/fonts/SF-Pro-Display-Heavy.ttf",
-      weight: "800",
-      style: "normal",
-    },
-    {
-      path: "../../public/assets/fonts/SF-Pro-Display-Black.ttf",
-      weight: "900",
-      style: "normal",
-    },
-  ],
 });
 
 /**
@@ -67,21 +21,22 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html
       lang="en"
-      className={SFPro.className}
+      className={inter.className}
       translate="no"
     >
       <body
         className={cn(
-          "bg-custom-white-900 relative mx-auto max-w-7xl overflow-x-hidden text-mood-gray antialiased",
+          "bg-custom-white-900 text-mood-gray relative mx-auto max-w-7xl overflow-x-hidden antialiased",
         )}
       >
         <a
           href="#main-content"
-          className="z-50 -top-40 transition-all duration-[250ms] ease-in-out absolute focus:top-0 p-2 m-3 bg-mood-gray text-custom-white-900"
+          aria-hidden="true"
+          className="z-50 -top-40 transition-all duration-[250ms] ease-in-out absolute focus:top-0 p-2 m-3 bg-primary text-secondary"
         >
           Skip To Content
         </a>
-        <Header />
+        <Navbar />
         <main
           className="antialiased focus:outline-none mt-10"
           id="main-content"

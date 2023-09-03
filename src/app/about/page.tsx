@@ -1,4 +1,5 @@
 import { Heading, Paragraph } from "@/components";
+import "@total-typescript/ts-reset";
 
 export default function Page() {
   return (

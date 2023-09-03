@@ -1,5 +1,3 @@
-import { ButtonType, HeadingType } from "@/constants";
-
-export type ButtonTypes = keyof typeof ButtonType;
+import { HeadingType } from "@/constants";
 
 export type HeadingTypeAs = keyof typeof HeadingType;

@@ -1,6 +1,6 @@
-import { Div } from "@/components";
 import { ReactNode } from "react";
+import "@total-typescript/ts-reset";
 
 export default function Layout({ children }: { children: ReactNode }) {
-  return <Div className="container mx-auto max-w-5xl">{children}</Div>;
+  return <div className="container mx-auto max-w-5xl">{children}</div>;
 }
