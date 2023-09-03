@@ -1,8 +1,16 @@
-import { HeadingProps } from "@/interfaces";
+import { forwardRef, memo } from "react";
+import type {
+  ForwardRefExoticComponent,
+  HTMLAttributes,
+  RefAttributes,
+} from "react";
+import type { HeadingProps } from "@/interfaces";
 import { cn } from "@/utils";
-import { HTMLAttributes, forwardRef, memo } from "react";
+import "@total-typescript/ts-reset";
 
-const Card = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
+const Card: ForwardRefExoticComponent<
+  HTMLAttributes<HTMLDivElement> & RefAttributes<HTMLDivElement>
+> = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ className, ...props }, ref) => (
     <div
       ref={ref}
@@ -16,7 +24,9 @@ const Card = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
 );
 Card.displayName = "Card";
 
-const CardHeader = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
+const CardHeader: ForwardRefExoticComponent<
+  HTMLAttributes<HTMLDivElement> & RefAttributes<HTMLDivElement>
+> = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ className, ...props }, ref) => (
     <div
       ref={ref}
@@ -27,7 +37,9 @@ const CardHeader = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
 );
 CardHeader.displayName = "CardHeader";
 
-const CardTitle = forwardRef<HTMLHeadingElement, HeadingProps>(
+const CardTitle: ForwardRefExoticComponent<
+  HeadingProps & RefAttributes<HTMLHeadingElement>
+> = forwardRef<HTMLHeadingElement, HeadingProps>(
   ({ className, ...props }, ref) => (
     // eslint-disable-next-line jsx-a11y/heading-has-content
     <h3
@@ -42,16 +54,17 @@ const CardTitle = forwardRef<HTMLHeadingElement, HeadingProps>(
 );
 CardTitle.displayName = "CardTitle";
 
-const CardDescription = forwardRef<
-  HTMLParagraphElement,
-  HTMLAttributes<HTMLParagraphElement>
->(({ className, ...props }, ref) => (
-  <p
-    ref={ref}
-    className={cn("text-sm text-muted-foreground", className)}
-    {...props}
-  />
-));
+const CardDescription: ForwardRefExoticComponent<
+  HTMLAttributes<HTMLParagraphElement> & RefAttributes<HTMLParagraphElement>
+> = forwardRef<HTMLParagraphElement, HTMLAttributes<HTMLParagraphElement>>(
+  ({ className, ...props }, ref) => (
+    <p
+      ref={ref}
+      className={cn("text-sm text-muted-foreground", className)}
+      {...props}
+    />
+  ),
+);
 CardDescription.displayName = "CardDescription";
 
 const CardContent = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
@@ -65,7 +78,9 @@ const CardContent = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
 );
 CardContent.displayName = "CardContent";
 
-const CardFooter = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
+const CardFooter: ForwardRefExoticComponent<
+  HTMLAttributes<HTMLDivElement> & RefAttributes<HTMLDivElement>
+> = forwardRef<HTMLDivElement, HTMLAttributes<HTMLDivElement>>(
   ({ className, ...props }, ref) => (
     <div
       ref={ref}

@@ -1,7 +1,7 @@
 import { NextFont } from "next/dist/compiled/@next/font";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
-import { Header } from "@/components";
+import { Navbar } from "@/components";
 import { cn } from "@/utils";
 import type { ReactNode } from "react";
 import "@/styles/globals.css";
@@ -36,7 +36,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         >
           Skip To Content
         </a>
-        <Header />
+        <Navbar />
         <main
           className="antialiased focus:outline-none mt-10"
           id="main-content"

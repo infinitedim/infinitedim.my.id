@@ -2,14 +2,14 @@
 
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu";
 import { Check, ChevronRight, Circle } from "lucide-react";
-
-import { cn } from "@/utils/index";
-import {
+import { forwardRef } from "react";
+import type {
   ComponentPropsWithoutRef,
   ElementRef,
   HTMLAttributes,
-  forwardRef,
 } from "react";
+import { cn } from "@/utils/index";
+import "@total-typescript/ts-reset";
 
 const DropdownMenuSubTrigger = forwardRef<
   ElementRef<typeof DropdownMenuPrimitive.SubTrigger>,

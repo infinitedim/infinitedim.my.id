@@ -1,3 +1,5 @@
+import "@total-typescript/ts-reset";
+
 export default function Loading() {
   return (
     <div className="m-auto flex items-center justify-center w-full h-[70vh]">

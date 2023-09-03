@@ -58,7 +58,7 @@ export const metadata: Metadata = {
  * @returns {ReactNode}
  * @type {JSX.Element}
  */
-export default function page() {
+export default function Page() {
   return (
     <div className="container mb-10 max-w-5xl">
       <div className="mb-5 flex items-center justify-center md:mb-20">

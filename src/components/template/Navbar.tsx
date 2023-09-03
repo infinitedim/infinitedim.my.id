@@ -1,14 +1,11 @@
 import Link from "next/link";
-import { Heading } from "./atoms";
+import { Heading } from "../atoms";
 
 export default function Navbar() {
   return (
     <nav className="flex items-center justify-between max-w-5xl w-[90%] mx-auto p-5 sticky top-5 bg-[rgba(255,255,255,0.8)] drop-shadow-xl rounded-3xl mt-5 z-10 backdrop-blur-md">
       <div className="self-start brand">
-        <Heading
-          as="h2"
-          className="text-2xl font-bold tracking-wide"
-        >
+        <Heading as="h2">
           <Link href="/">Dimas</Link>
         </Heading>
       </div>

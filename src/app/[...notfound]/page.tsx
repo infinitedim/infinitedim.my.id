@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import "@total-typescript/ts-reset";
 
 export const metadata: Metadata = {
   title: "404 - Page Not Found",
