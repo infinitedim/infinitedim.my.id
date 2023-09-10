@@ -3,7 +3,6 @@ import { Metadata } from "next";
 import Image from "next/image";
 import { Heading, Paragraph } from "@/components/atoms";
 import Sapiens from "@/public/assets/svg/hero.svg";
-import "@total-typescript/ts-reset";
 
 /**
  * @description This is the main metadata in this pages

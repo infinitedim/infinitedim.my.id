@@ -3,7 +3,6 @@ import { buttonVariants } from "@/constants/variants";
 import { ButtonProps } from "@/interfaces";
 import { cn } from "@/utils";
 import { forwardRef, memo } from "react";
-import "@total-typescript/ts-reset";
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, ...props }, ref) => {

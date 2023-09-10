@@ -3,7 +3,6 @@
 import { ParagraphProps } from "@/interfaces";
 import { cn } from "@/utils";
 import { memo } from "react";
-import "@total-typescript/ts-reset";
 
 function Paragraph({ children, className, ...props }: ParagraphProps) {
   return (

@@ -6,7 +6,6 @@ import type {
 } from "react";
 import type { HeadingProps } from "@/interfaces";
 import { cn } from "@/utils";
-import "@total-typescript/ts-reset";
 
 const Card: ForwardRefExoticComponent<
   HTMLAttributes<HTMLDivElement> & RefAttributes<HTMLDivElement>

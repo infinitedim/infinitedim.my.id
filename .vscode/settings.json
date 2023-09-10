@@ -1,4 +1,15 @@
 {
   "typescript.tsdk": "node_modules\\typescript\\lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "Dockerfile": ".dockerignore, Dockerfile.development, Dockerfile.production, Dockerfile.testing",
+    "*.ts": "${capture}.d.ts",
+    "next.config.js": "next-env.d.ts",
+    "tailwind.config.js": "postcss.config.js",
+    "README.md": "${capture}.md",
+    ".eslintrc.json": ".eslintcache, .eslintignore",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb"
+  }
 }

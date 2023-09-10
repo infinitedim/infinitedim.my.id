@@ -9,7 +9,6 @@ import type {
   HTMLAttributes,
 } from "react";
 import { cn } from "@/utils/index";
-import "@total-typescript/ts-reset";
 
 const DropdownMenuSubTrigger = forwardRef<
   ElementRef<typeof DropdownMenuPrimitive.SubTrigger>,

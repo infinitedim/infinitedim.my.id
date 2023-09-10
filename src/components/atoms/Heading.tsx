@@ -5,7 +5,6 @@
 import { HeadingProps } from "@/interfaces";
 import { memo } from "react";
 import { cn } from "@/utils";
-import "@total-typescript/ts-reset";
 
 function Heading({ as, children, className, ...props }: HeadingProps) {
   return as === "h1" ? (
