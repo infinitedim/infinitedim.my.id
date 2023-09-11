@@ -1,5 +1,5 @@
 {
-  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "typescript.tsdk": "./node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": false,
@@ -11,5 +11,6 @@
     "README.md": "${capture}.md",
     ".eslintrc.json": ".eslintcache, .eslintignore",
     "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb"
-  }
+  },
+  "editor.wordWrap": "on"
 }
