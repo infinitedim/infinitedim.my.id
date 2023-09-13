@@ -12,7 +12,8 @@
     "format:diff": "prettier --config .prettierrc.json --list-different \"**/*.{js,jsx,ts,tsx,md,mdx}\"",
     "postinstall": "husky install",
     "type-check": "tsc --project tsconfig.json --pretty --noEmit",
-    "commit": "git add . && cz"
+    "commit": "git add . && cz",
+    "install:no-lock": "bun install --no-save"
   },
   "lint-staged": {
     "**/*.{html,css,scss,less,json,js,jsx,ts,tsx,md,mdx}\"": [
