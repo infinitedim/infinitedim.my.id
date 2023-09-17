@@ -2,3 +2,5 @@
 @tailwind components;
 @tailwind utilities;
 @tailwind variants;
+
+@import url('./jelly-maker.css');

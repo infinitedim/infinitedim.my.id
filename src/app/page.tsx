@@ -1,5 +1,8 @@
 import { Heading } from "@/components";
 import { Metadata } from "next";
+import { cn } from "@/utils";
+import Hero from "@/public/hero.svg";
+import Image from "next/image";
 import { oswald } from "./fonts";
 
 export const metadata: Metadata = {
@@ -21,7 +24,7 @@ export const metadata: Metadata = {
     "portfolio infinitedim",
     "Dimas portfolio",
   ],
-  authors: [{ name: "infinitedim", url: "https://infinitedim.vercel.app" }],
+  authors: [{ name: "infinitedim", url: "https://infinitedim.site" }],
   publisher: "vercel",
   creator: "infinitedim",
   viewport: { width: "device-width", initialScale: 1 },
@@ -31,20 +34,31 @@ export default function Home() {
   return (
     <section
       id="homepage"
-      className="container mx-auto flex flex-col w-full max-w-6xl items-center h-[60vh] justify-center"
+      className={cn(
+        "container mx-auto mt-32 flex w-full max-w-6xl flex-col items-center justify-around",
+      )}
     >
-      <Heading
-        as="h3"
-        className={`${oswald.className} font-light text-5xl text-woodsmoke-950`}
-      >
-        Hi! My name is
-      </Heading>
-      <Heading
-        as="h1"
-        className="font-black text-woodsmoke-950 text-6xl lg:text-9xl"
-      >
-        Dimas Saputra
-      </Heading>
+      <div className="self-center flex flex-col items-center my-10">
+        <Heading
+          as="h3"
+          className={cn(
+            `${oswald.className} text-3xl font-light tracking-tighter text-woodsmoke-950 lg:text-5xl`,
+          )}
+        >
+          Hi! My name is
+        </Heading>
+        <Heading
+          as="h1"
+          className="font-bold tracking-tighter text-woodsmoke-950 text-5xl lg:text-9xl"
+        >
+          Dimas Saputra
+        </Heading>
+      </div>
+      <Image
+        src={Hero}
+        alt="Hero"
+        className={cn("h-3/5 w-3/5 sm:h-2/5 sm:w-2/5")}
+      />
     </section>
   );
 }

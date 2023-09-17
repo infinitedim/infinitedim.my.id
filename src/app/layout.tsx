@@ -7,7 +7,10 @@ import "@/styles/globals.css";
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>
+      <body
+        className={`${inter.className}`}
+        suppressHydrationWarning
+      >
         <Header />
         <main>{children}</main>
       </body>
