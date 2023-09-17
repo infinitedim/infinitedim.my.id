@@ -1,3 +1,3 @@
 export * from "./atoms";
-export * from "./molecules";
-export * from "./template";
+
+export { default as Header } from "./Header";

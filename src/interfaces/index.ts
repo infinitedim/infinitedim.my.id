@@ -1,19 +1,13 @@
-import { buttonVariants } from "@/constants";
-import { HeadingTypeAs } from "@/types";
-import { VariantProps } from "class-variance-authority";
-import { ButtonHTMLAttributes, HtmlHTMLAttributes } from "react";
-
-export interface ButtonProps
-  extends ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
-  asChild?: boolean;
-}
+import { HeadingAsType } from "@/types";
+import { HtmlHTMLAttributes } from "react";
+import { SVGMotionProps, Variants } from "framer-motion";
 
 export interface HeadingProps extends HtmlHTMLAttributes<HTMLHeadingElement> {
-  as: HeadingTypeAs;
+  as: HeadingAsType;
 }
 
-export interface ParagraphProps
-  extends HtmlHTMLAttributes<HTMLParagraphElement> {
+export interface AnimationableSVGProps extends SVGMotionProps<SVGSVGElement> {
   className?: string;
+  pathVariants?: Variants | undefined;
+  svgVariants?: Variants | undefined;
 }
