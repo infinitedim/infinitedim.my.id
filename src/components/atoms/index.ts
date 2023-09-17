@@ -1,2 +1,2 @@
-export { default as Paragraph } from "./Paragraph";
+export * from "./icons";
 export { default as Heading } from "./Heading";

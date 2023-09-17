@@ -1,3 +1,3 @@
-import { HeadingType } from "@/constants";
+import { HeadingAs } from "@/constants";
 
-export type HeadingTypeAs = keyof typeof HeadingType;
+export type HeadingAsType = keyof typeof HeadingAs;
