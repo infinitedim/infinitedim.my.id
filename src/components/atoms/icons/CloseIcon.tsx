@@ -1,16 +1,16 @@
 "use client";
 
-import { AnimationableSVGProps } from "@/interfaces";
-import React, { memo } from "react";
+import { memo } from "react";
 import { motion } from "framer-motion";
+import type { AnimationableSVGProps } from "@/interfaces";
 import { cn } from "@/utils";
 
-function CloseIcon({
-  className,
-  svgVariants,
+export const CloseIcon = ({
+  className = "w-6 h-6",
   pathVariants,
+  svgVariants,
   ...props
-}: AnimationableSVGProps) {
+}: AnimationableSVGProps) => {
   return (
     <motion.svg
       xmlns="http://www.w3.org/2000/svg"
@@ -18,7 +18,7 @@ function CloseIcon({
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className={cn(`${className} h-6 w-6`)}
+      className={cn(className)}
       variants={svgVariants}
       {...props}
     >
@@ -30,6 +30,6 @@ function CloseIcon({
       />
     </motion.svg>
   );
-}
+};
 
 export default memo(CloseIcon);
