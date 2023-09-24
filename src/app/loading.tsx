@@ -3,7 +3,7 @@ import { cn } from "@/utils";
 export default function Loading() {
   return (
     <div
-      className={cn("m-auto flex h-[70vh] w-full items-center justify-center")}
+      className={cn("m-auto flex h-screen w-full items-center justify-center")}
     >
       <div className="jelly-triangle">
         <div className="jelly-triangle__dot" />

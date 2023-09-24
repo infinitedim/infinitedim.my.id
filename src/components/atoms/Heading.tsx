@@ -4,7 +4,7 @@
 
 import { motion } from "framer-motion";
 import { memo } from "react";
-import { HeadingProps } from "@/interfaces";
+import type { HeadingProps } from "@/interfaces";
 import { cn } from "@/utils";
 
 function Heading({ as, children, className, ...props }: HeadingProps) {

@@ -30,15 +30,19 @@
 .jelly-triangle::before {
   bottom: 6%;
   right: 0;
-  -webkit-animation: grow0 var(--uib-speed) ease calc(var(--uib-speed) * -0.666) infinite;
-  animation: grow0 var(--uib-speed) ease calc(var(--uib-speed) * -0.666) infinite;
+  -webkit-animation: grow0 var(--uib-speed) ease calc(var(--uib-speed) * -0.666)
+    infinite;
+  animation: grow0 var(--uib-speed) ease calc(var(--uib-speed) * -0.666)
+    infinite;
 }
 
 .jelly-triangle::after {
   bottom: 6%;
   left: 0;
-  -webkit-animation: grow0 var(--uib-speed) ease calc(var(--uib-speed) * -0.333) infinite;
-  animation: grow0 var(--uib-speed) ease calc(var(--uib-speed) * -0.333) infinite;
+  -webkit-animation: grow0 var(--uib-speed) ease calc(var(--uib-speed) * -0.333)
+    infinite;
+  animation: grow0 var(--uib-speed) ease calc(var(--uib-speed) * -0.333)
+    infinite;
 }
 
 .jelly-triangle__traveler {
@@ -60,7 +64,6 @@
 }
 
 @-webkit-keyframes triangulate {
-
   0%,
   100% {
     -webkit-transform: none;
@@ -79,7 +82,6 @@
 }
 
 @keyframes triangulate {
-
   0%,
   100% {
     -webkit-transform: none;
@@ -98,7 +100,6 @@
 }
 
 @-webkit-keyframes grow0 {
-
   0%,
   100% {
     -webkit-transform: scale(1.5);
@@ -113,7 +114,6 @@
 }
 
 @keyframes grow0 {
-
   0%,
   100% {
     -webkit-transform: scale(1.5);

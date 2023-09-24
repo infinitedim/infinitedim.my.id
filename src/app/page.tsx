@@ -1,10 +1,11 @@
 /* eslint-disable no-nested-ternary */
 
-import { Heading } from "@/components";
 import { Metadata } from "next";
-import { cn } from "@/utils";
-import Hero from "@/public/hero.svg";
 import Image from "next/image";
+import { myFirstName, myLastName } from "@/constants";
+import { Heading } from "@/components";
+import Hero from "@/public/hero.svg";
+import { cn } from "@/utils";
 import { oswald } from "./fonts";
 
 export const metadata: Metadata = {
@@ -33,65 +34,34 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const myFirstName: Array<String> = ["D", "i", "m", "a", "s"];
-  const myLastName: Array<String> = ["S", "a", "p", "u", "t", "r", "a"];
+  const greeting: Array<String> = ["Hi!", "my", "name", "is"];
+
   return (
     <section
       id="homepage"
       className={cn(
-        "container mx-auto mt-32 flex w-full max-w-6xl flex-col items-center justify-around",
+        "container mx-auto mt-20 flex h-full w-full max-w-6xl flex-col items-center justify-around sm:mt-32",
       )}
     >
-      <div className="self-center flex flex-col items-center my-10">
-        <div className="flex space-x-2 mb-10">
-          <Heading
-            as="h3"
-            className={cn(
-              `${oswald.className} text-3xl font-light tracking-tighter text-woodsmoke-950 lg:text-5xl`,
-            )}
-            initial={{ opacity: 0, y: -10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.2, type: "spring" }}
-            viewport={{ once: true, amount: 1 }}
-          >
-            Hi!
-          </Heading>
-          <Heading
-            as="h3"
-            className={cn(
-              `${oswald.className} text-3xl font-light tracking-tighter text-woodsmoke-950 lg:text-5xl`,
-            )}
-            initial={{ opacity: 0, y: -15 }}
-            whileInView={{ opacity: 1, y: 0, rotate: 0 }}
-            transition={{ delay: 0.5, duration: 0.3, type: "spring" }}
-            viewport={{ once: true, amount: 1 }}
-          >
-            My
-          </Heading>
-          <Heading
-            as="h3"
-            className={cn(
-              `${oswald.className} text-3xl font-light tracking-tighter text-woodsmoke-950 lg:text-5xl`,
-            )}
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.4, type: "spring" }}
-            viewport={{ once: true, amount: 1 }}
-          >
-            name
-          </Heading>
-          <Heading
-            as="h3"
-            className={cn(
-              `${oswald.className} text-3xl font-light tracking-tighter text-woodsmoke-950 lg:text-5xl`,
-            )}
-            initial={{ opacity: 0, y: -25 }}
-            whileInView={{ opacity: 1, y: 0, rotate: 0 }}
-            transition={{ delay: 0.5, duration: 0.5, type: "spring" }}
-            viewport={{ once: true, amount: 1 }}
-          >
-            is
-          </Heading>
+      <div className="self-center flex flex-col items-center mt-10">
+        <div className="flex space-x-2 sm:mb-10">
+          {greeting.map((item) => {
+            return (
+              <Heading
+                as="h3"
+                className={cn(
+                  `${oswald.className} text-3xl font-light tracking-tighter text-woodsmoke-950 lg:text-5xl`,
+                )}
+                initial={{ opacity: 0, y: -10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.2, type: "tween" }}
+                viewport={{ once: true, amount: 1 }}
+                key={Math.floor(Math.random() * 6123240394328)}
+              >
+                {item}
+              </Heading>
+            );
+          })}
         </div>
         <div className="flex gap-x-5">
           <div className="flex">
@@ -100,8 +70,22 @@ export default function Home() {
                 <Heading
                   as="h1"
                   key={Math.floor(Math.random() * 62129842342044)}
-                  className="font-black tracking-tighter mb-5 text-woodsmoke-950 text-5xl lg:text-9xl"
-                  initial={{ opacity: 0, y: 10 }}
+                  className="font-black tracking-tighter sm:mb-5 text-woodsmoke-950 text-5xl lg:text-9xl"
+                  initial={{
+                    opacity: 0,
+                    y:
+                      name === "D"
+                        ? 10
+                        : name === "i"
+                        ? 20
+                        : name === "m"
+                        ? 30
+                        : name === "a"
+                        ? 40
+                        : name === "s"
+                        ? 50
+                        : 0,
+                  }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{
                     delay: 0.5,
@@ -117,7 +101,7 @@ export default function Home() {
                         : name === "s"
                         ? 1.1
                         : 0,
-                    type: "spring",
+                    type: "tween",
                   }}
                   viewport={{ once: true, amount: 1 }}
                 >
@@ -133,27 +117,33 @@ export default function Home() {
                   as="h1"
                   key={Math.floor(Math.random() * 62129842342044)}
                   className="font-black tracking-tighter mb-5 text-woodsmoke-950 text-5xl lg:text-9xl"
-                  initial={{ opacity: 0, y: 10 }}
+                  initial={{
+                    opacity: 0,
+                    y:
+                      name === "Sa"
+                        ? 10
+                        : name === "pu"
+                        ? 30
+                        : name === "tr"
+                        ? 50
+                        : name === "a"
+                        ? 70
+                        : 0,
+                  }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{
                     delay: 0.5,
                     duration:
-                      name === "S"
-                        ? 1.3
+                      name === "Sa"
+                        ? 0.3
+                        : name === "pu"
+                        ? 0.5
+                        : name === "tr"
+                        ? 0.7
                         : name === "a"
-                        ? 1.5
-                        : name === "p"
-                        ? 1.7
-                        : name === "u"
-                        ? 1.9
-                        : name === "t"
-                        ? 2.1
-                        : name === "r"
-                        ? 2.3
-                        : name === "a"
-                        ? 2.5
+                        ? 0.9
                         : 0,
-                    type: "spring",
+                    type: "tween",
                   }}
                   viewport={{ once: true, amount: 1 }}
                 >
@@ -168,6 +158,7 @@ export default function Home() {
         src={Hero}
         alt="Hero"
         className={cn("h-3/5 w-3/5 sm:h-2/5 sm:w-2/5")}
+        priority
       />
     </section>
   );
