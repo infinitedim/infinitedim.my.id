@@ -6,7 +6,7 @@ export const ButtonType = {
   reset: "reset",
 } as const;
 
-export const HeadingAs = {
+export const HeadingTypeAs = {
   h1: "h1",
   h2: "h2",
   h3: "h3",
@@ -24,17 +24,13 @@ export const menuItems: Array<String> = [
 export const closeIconAnimation: Variants = {
   hidden: {
     pathLength: 0,
-    opacity: 0,
-    rotate: 180,
-    scale: 0,
+    opacity: 1,
   },
   visible: {
     pathLength: 1,
     opacity: 1,
-    rotate: 0,
-    scale: 1,
     transition: {
-      duration: 0.5,
+      duration: 1,
       ease: "easeInOut",
     },
   },
@@ -43,14 +39,17 @@ export const closeIconAnimation: Variants = {
 export const menuIconAnimation: Variants = {
   hidden: {
     pathLength: 0,
-    opacity: 0,
+    opacity: 1,
   },
   visible: {
     pathLength: 1,
     opacity: 1,
     transition: {
-      duration: 0.7,
+      duration: 1,
       ease: "easeInOut",
     },
   },
 };
+
+export const myFirstName: Array<String> = ["D", "i", "m", "a", "s"];
+export const myLastName: Array<String> = ["Sa", "pu", "tr", "a"];

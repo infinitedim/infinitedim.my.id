@@ -1,6 +1,6 @@
-import { ButtonTypes, HeadingAsType } from "@/types";
-import { ReactNode, RefObject } from "react";
+import { ReactNode } from "react";
 import { HTMLMotionProps, SVGMotionProps, Variants } from "framer-motion";
+import { ButtonType, HeadingTypeAs } from "@/constants";
 
 export interface AnimationableSVGProps extends SVGMotionProps<SVGSVGElement> {
   className?: string;
@@ -11,13 +11,10 @@ export interface AnimationableSVGProps extends SVGMotionProps<SVGSVGElement> {
 export interface ButtonProps extends HTMLMotionProps<"button"> {
   children: ReactNode;
   className?: string;
-  type: ButtonTypes;
+  type: keyof typeof ButtonType;
 }
 
-export interface HeadingProps extends HTMLMotionProps<HeadingAsType> {
-  as: HeadingAsType;
-}
-
-export interface ProgressBarProps extends SVGMotionProps<SVGSVGElement> {
-  ref: RefObject<HTMLElement> | undefined;
+export interface HeadingProps
+  extends HTMLMotionProps<keyof typeof HeadingTypeAs> {
+  as?: keyof typeof HeadingTypeAs;
 }
