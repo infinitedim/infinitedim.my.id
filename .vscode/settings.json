@@ -13,7 +13,7 @@
     ".prettierrc*": ".prettierignore",
     "package.json": "package*, yarn.lock, pnpm-lock.yaml, bun.lockb, bunfig.toml, .npmrc, .nvmrc, .yarnrc"
   },
-  "editor.wordWrap": "on",
+  "editor.wordWrap": "wordWrapColumn",
   "files.exclude": {
     "**/.git": false
   },

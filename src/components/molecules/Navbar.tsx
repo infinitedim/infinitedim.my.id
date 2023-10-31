@@ -9,7 +9,6 @@ import { inter } from "@/app/fonts";
 import { closeIconAnimation, menuIconAnimation, menuItems } from "@/constants";
 import { Button, CloseIcon, Heading, MenuIcon } from "@/components/atoms";
 import Link from "next/link";
-// import { useScreen } from "@/hooks";
 import { cn } from "@/utils";
 import { useWindowSize } from "usehooks-ts";
 
@@ -24,10 +23,11 @@ function Navbar() {
   function handleButtonClick() {
     setIsNavOpen((prevState: boolean) => !prevState);
   }
-  return width <= 576 ? (
+
+  return width < 577 ? (
     <motion.nav
       initial={{
-        x: -width / 10,
+        x: -width / 4,
         opacity: 0,
       }}
       whileInView={{
@@ -141,7 +141,7 @@ function Navbar() {
   ) : (
     <motion.nav
       initial={{
-        x: -width / 3,
+        x: -500,
         opacity: 0,
       }}
       whileInView={{

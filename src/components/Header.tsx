@@ -8,7 +8,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { memo } from "react";
 import { oswald } from "@/app/fonts";
-import { menuIconAnimation } from "@/constants";
 import { cn } from "@/utils";
 import { GithubIcon, Heading } from "./atoms";
 import Navbar from "./molecules/Navbar";
@@ -58,7 +57,10 @@ function Header() {
       >
         <GithubIcon
           className="h-8 w-8"
-          svgVariants={menuIconAnimation}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 1 }}
+          viewport={{ once: true, amount: 1 }}
         />
       </Link>
       <div />

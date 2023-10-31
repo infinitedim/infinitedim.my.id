@@ -9,13 +9,13 @@ export default function NotFound() {
   return (
     <div
       className={cn(
-        "container flex h-[80vh] flex-col items-center justify-center",
+        "container flex h-[80vh] flex-col items-center justify-center sm:mt-20",
       )}
     >
       <Image
         src={Dog}
         alt="not found"
-        className={cn("-mb-20 h-3/4 w-3/4 sm:h-2/4 sm:w-2/4")}
+        className={cn("h-3/4 w-3/4 sm:h-2/4 sm:w-2/4")}
       />
       <Heading
         title="Error"
