@@ -1,7 +1,7 @@
 .jelly-triangle {
   --uib-size: 42px;
   --uib-speed: 1.25s;
-  --uib-color: #0f172a;
+  --uib-color: #09090b;
   position: relative;
   height: var(--uib-size);
   width: var(--uib-size);

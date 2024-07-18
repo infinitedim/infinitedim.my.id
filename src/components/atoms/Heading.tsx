@@ -2,61 +2,47 @@
 
 "use client";
 
-import { HeadingProps } from "@/interfaces";
+import { motion } from "framer-motion";
 import { memo } from "react";
+import type { HeadingProps } from "@/interfaces";
 import { cn } from "@/utils";
 
 function Heading({ as, children, className, ...props }: HeadingProps) {
   return as === "h1" ? (
-    <h1
+    <motion.h1
       {...props}
-      className={cn(
-        className,
-        "scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl",
-      )}
+      className={cn(className)}
     >
       {children}
-    </h1>
+    </motion.h1>
   ) : as === "h2" ? (
-    <h2
+    <motion.h2
       {...props}
-      className={cn(
-        className,
-        "scroll-m-20 pb-2 text-3xl font-semibold tracking-tight transition-colors first:mt-0",
-      )}
+      className={cn(className)}
     >
       {children}
-    </h2>
+    </motion.h2>
   ) : as === "h3" ? (
-    <h3
+    <motion.h3
       {...props}
-      className={cn(
-        className,
-        "scroll-m-20 text-2xl font-semibold tracking-tight",
-      )}
+      className={cn(className)}
     >
       {children}
-    </h3>
+    </motion.h3>
   ) : as === "h4" ? (
-    <h4
+    <motion.h4
       {...props}
-      className={cn(
-        className,
-        "scroll-m-20 text-xl font-semibold tracking-tight",
-      )}
+      className={cn(className)}
     >
       {children}
-    </h4>
+    </motion.h4>
   ) : (
-    <h1
+    <motion.h1
       {...props}
-      className={cn(
-        className,
-        "scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl",
-      )}
+      className={cn(className)}
     >
       {children}
-    </h1>
+    </motion.h1>
   );
 }
 

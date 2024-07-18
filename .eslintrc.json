@@ -21,7 +21,7 @@
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 2021,
+    "ecmaVersion": "latest",
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
@@ -61,7 +61,7 @@
     "tailwindcss/classnames-order": [
       2,
       {
-        "callees": ["classnames", "clsx", "ctl", "cva", "tv", "cn"],
+        "callees": ["className", "clsx", "ctl", "cva", "tv", "cn"],
         "removeDuplicates": true,
         "skipClassAttribute": true
       }

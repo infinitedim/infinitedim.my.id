@@ -4,13 +4,20 @@
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": false,
   "explorer.fileNesting.patterns": {
-    "Dockerfile": ".dockerignore, Dockerfile.development, Dockerfile.production, Dockerfile.testing",
+    "Docker*": ".dockerignore, Dockerfile.development, Dockerfile.production, Dockerfile.testing, docker-compose.*",
     "*.ts": "${capture}.d.ts",
-    "next.config.js": "next-env.d.ts",
-    "tailwind.config.js": "postcss.config.js",
+    "next.config.*": "next-env.d.ts",
+    "tailwind.config.*": "postcss.config.js",
     "README.md": "${capture}.md",
-    ".eslintrc.json": ".eslintcache, .eslintignore",
-    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb"
+    ".eslintrc*": ".eslintcache, .eslintignore",
+    ".prettierrc*": ".prettierignore",
+    "package.json": "package*, yarn.lock, pnpm-lock.yaml, bun.lockb, bunfig.toml, .npmrc, .nvmrc, .yarnrc"
   },
-  "editor.wordWrap": "on"
+  "editor.wordWrap": "wordWrapColumn",
+  "files.exclude": {
+    "**/.git": false
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  }
 }
